@@ -1,0 +1,64 @@
+{% load static %}
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- ***** Logo Start ***** -->
+    <a href="index.html" class="logo">
+        <img src="{% static 'site_static/images/ut_logo.png' %}" align="">
+    </a>
+    <!-- ***** Logo End ***** -->
+    <!-- ***** Menu Start ***** -->
+    <ul class="nav">
+        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+        <li class="scroll-to-section"><a href="#about">About</a></li>
+        
+
+    <title>Uncle Tetsu Restaurant</title>
+</head>
+    <!-- ***** Header Area End ***** -->
+
+    {% block body %}
+    
+    {% endblock body %}
+
+    
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="{% static 'site_static/images/ut_logo2.png' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© Copyright</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  </body>
+</html>
