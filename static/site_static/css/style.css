@@ -1,0 +1,43 @@
+.main-banner {
+  padding: 30px 0;
+}
+
+.main-banner .left-content {
+  margin-bottom: 20px;
+}
+
+.main-banner h4 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main-banner h6 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.main-banner-carousel .item img {
+  width: 400px;
+  height: 250px;
+}
+
+.main-white-button {
+  margin-top: 50px;
+}
+
+.main-white-button a {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #FA594A;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.main-white-button a:hover {
+  background-color: #FF453A;
+}

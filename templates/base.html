@@ -1,64 +1,159 @@
 {% load static %}
-{% load bootstrap4 %}
 
 <!DOCTYPE html>
 <html lang="en">
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  <head>
+    <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- ***** Logo Start ***** -->
-    <a href="index.html" class="logo">
-        <img src="{% static 'site_static/images/ut_logo.png' %}" align="">
-    </a>
-    <!-- ***** Logo End ***** -->
-    <!-- ***** Menu Start ***** -->
-    <ul class="nav">
-        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-        <li class="scroll-to-section"><a href="#about">About</a></li>
-        
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'site_static/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'site_static/dist/assets/owl.theme.default.min.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--JQuery CDN -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'site_static/css/style.css' %}">
+
+
 
     <title>Uncle Tetsu Restaurant</title>
-</head>
-    <!-- ***** Header Area End ***** -->
+  </head>
+  <body>
+    
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'site_static/images/ut_logo.png' %}" alt="Logo" width="100" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ***** Header End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+<section id="top" class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left-content">
+            <div class="inner-content">
+              <h4>Uncle Tetsu</h4>
+              <h6>THE BEST EXPERIENCE</h6>
+              <div class="main-white-button scroll-to-section">
+                <a href="#reservation">Make A Reservation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 main-banner-carousel owl-carousel">
+          <div class="item">
+            <img src="{% static 'site_static/images/banner_img3.jpeg' %}" alt="">
+          </div>
+          <div class="item">
+            <img src="{% static 'site_static/images/banner_img1.png' %}" alt="">
+          </div>
+          <div class="item">
+            <img src="{% static 'site_static/images/banner_img2.png' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+  
 
     {% block body %}
     
     {% endblock body %}
 
     
-    
     <!-- ***** Footer Start ***** -->
-    <footer>
+    <footer class="text-center py-3" style="background-color: #FA594A;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-xs-12">
-                    <div class="right-text-content">
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                    </div>
+                <div class="col-lg-12">
+                    <ul class="list-inline social-icons">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-4">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="{% static 'site_static/images/ut_logo2.png' %}" alt="">
-                        </a>
-                    </div>
+            </div>
+            <div class="col-lg3">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="{% static 'site_static/images/ut_logo2.png' %}" alt="Logo" width="100" height="100">
+                    </a>
                 </div>
-                <div class="col-lg-4 col-xs-12">
-                    <div class="left-text-content">
-                        <p>© Copyright</p>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>&copy; 2023 Uncle Tetsu Restaurant. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- ***** Footer End ***** -->
+    
+    <script>
+        $(document).ready(function(){
+          $('.main-banner-carousel').owlCarousel({
+            items: 1, // Define o número de itens a serem exibidos
+            loop: true, // Habilita o loop do carrossel
+            autoplay: true, // Ativa o autoplay
+            autoplayTimeout: 3000, // Define o tempo de pausa entre os slides (em milissegundos)
+            autoplayHoverPause: true // Pausa a reprodução automática ao passar o mouse sobre o carrossel
+          });
+        });
+    </script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
 
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
   </body>
 </html>
