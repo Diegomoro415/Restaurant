@@ -1,3 +1,12 @@
+/* Nav Bar */
+
+.navbar {
+  padding: 0.5rem 4rem;
+  border-bottom: black 2px solid;
+  margin-top: -15px;
+}
+/* Main Banner */
+
 .main-banner {
   padding: 30px 0;
 }
@@ -7,15 +16,18 @@
 }
 
 .main-banner h4 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-family: 'Beach Resort', cursive;
+  font-size: 50px;
+  font-weight: 700;
+  margin-left: 15%;
+  margin-top: 5%;
 }
 
 .main-banner h6 {
   font-size: 18px;
-  font-weight: normal;
-  margin-bottom: 30px;
+  font-weight: 400;
+  margin-bottom: 15%;
+  margin-left: 20%;
 }
 
 .main-banner-carousel .item img {
@@ -24,7 +36,8 @@
 }
 
 .main-white-button {
-  margin-top: 50px;
+  margin-top: -15px;
+  margin-left: 15%;
 }
 
 .main-white-button a {
@@ -40,4 +53,43 @@
 
 .main-white-button a:hover {
   background-color: #FF453A;
+}
+
+/* Menu */
+
+.menu-item-card {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-item-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  width: 80%;
+}
+
+.menu-item-card:hover .menu-item-details {
+  opacity: 1;
+}
+
+/* Footer */
+
+footer a {
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 20px;
+}
+
+footer img {
+  width: 120px;
+  height: 100px;
+  margin-top: -30px;
 }
