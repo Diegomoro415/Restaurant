@@ -21,7 +21,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', include('home.urls', namespace='home')),
     path('menu/', include('menu.urls', namespace='menu')),
+    path('reservation/', include('reservation.urls', namespace='reservation')),
+    path('contact_us/', include('contact_us.urls', namespace='contact_us')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
