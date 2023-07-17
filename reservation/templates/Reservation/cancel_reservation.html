@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>Cancel Reservation</h1>
+            <p>Are you sure you want to cancel the reservation with ID {{ reservation.id }}?</p>
+            <form method="POST" action="{% url 'cancel_reservation' reservation.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Cancel Reservation</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
