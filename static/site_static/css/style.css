@@ -2,8 +2,12 @@
 
 .navbar {
   padding: 0.5rem 4rem;
-  border-bottom: black 2px solid;
+  border-bottom: #FA594A 1px solid;
   margin-top: -15px;
+}
+
+.navbar-nav {
+  font-size: 20px;
 }
 /* Main Banner */
 

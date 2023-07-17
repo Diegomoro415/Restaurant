@@ -61,53 +61,6 @@
       </nav>
     </header>
     <!-- ***** Header End ***** -->
-
-    <!-- ***** Main Banner Area Start ***** -->
-<section id="top" class="main-banner">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="left-content">
-          <div class="inner-content">
-            <h4>Uncle Tetsu</h4>
-            <h6>THE BEST EXPERIENCE</h6>
-            <div class="main-white-button scroll-to-section">
-              <a href="#reservation">Make A Reservation</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 main-banner-carousel owl-carousel">
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img3.jpeg' %}" alt="">
-        </div>
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img1.png' %}" alt="">
-        </div>
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img2.png' %}" alt="">
-        </div>
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img4.webp' %}" alt="">
-        </div>
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img5.jpeg' %}" alt="">
-        </div>
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img6.jpeg' %}" alt="">
-        </div><div class="item">
-          <img src="{% static 'site_static/images/banner_img7.jpeg' %}" alt="">
-        </div>
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img8.jpeg' %}" alt="">
-        </div>
-        <div class="item">
-          <img src="{% static 'site_static/images/banner_img9.jpeg' %}" alt="">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Main Banner Area End ***** -->
   
 
     {% block body %}
@@ -152,20 +105,12 @@
     </footer>
     <!-- ***** Footer End ***** -->
     
-    <script>
-        $(document).ready(function(){
-          $('.main-banner-carousel').owlCarousel({
-            items: 1, // Define o número de itens a serem exibidos
-            loop: true, // Habilita o loop do carrossel
-            autoplay: true, // Ativa o autoplay
-            autoplayTimeout: 3000, // Define o tempo de pausa entre os slides (em milissegundos)
-            autoplayHoverPause: true // Pausa a reprodução automática ao passar o mouse sobre o carrossel
-          });
-        });
-    </script>
     
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- jQuery, jQuery UI and jQuery UI CSS libraries -->  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
 
     <!-- Bootstrap JS -->

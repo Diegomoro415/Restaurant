@@ -25,8 +25,5 @@ urlpatterns = [
     path('menu/', include('menu.urls', namespace='menu')),
     path('reservation/', include('reservation.urls', namespace='reservation')),
     path('contact_us/', include('contact_us.urls', namespace='contact_us')),
+    path('', include('home.urls', namespace='home')),
 ]
-
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
