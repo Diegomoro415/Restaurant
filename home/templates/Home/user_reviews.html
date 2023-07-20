@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- User Reviews Section -->
+<section class="user-reviews-section">
+    <div class="container">
+      <h2>User Reviews</h2>
+      <div class="row">
+        {% for review in reviews %}
+        <div class="col-lg-6 col-md-12">
+          <div class="user-review">
+            <h4>{{ review.name }}</h4>
+            <p>{{ review.comment }}</p>
+            <p>Rating: {{ review.rating }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+
+{% endblock body %}

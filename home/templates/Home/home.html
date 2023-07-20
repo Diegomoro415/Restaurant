@@ -3,6 +3,117 @@
 {% load static %}
 
 {% block body %}
-  
+
+<!-- ***** Main Banner Area Start ***** -->
+<section id="top" class="main-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="left-content">
+                    <div class="inner-content">
+                        <h4>Uncle Tetsu</h4>
+                        <h6>THE BEST EXPERIENCE</h6>
+                            <div class="main-white-button scroll-to-section">
+                                <a href="#reservation">Make A Reservation</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6 main-banner-carousel owl-carousel">
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img3.jpeg' %}" alt="">
+            </div>
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img1.png' %}" alt="">
+            </div>
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img2.png' %}" alt="">
+            </div>
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img4.webp' %}" alt="">
+            </div>
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img5.jpeg' %}" alt="">
+            </div>
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img6.jpeg' %}" alt="">
+            </div><div class="item">
+                <img src="{% static 'site_static/images/banner_img7.jpeg' %}" alt="">
+            </div>
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img8.jpeg' %}" alt="">
+            </div>
+            <div class="item">
+                <img src="{% static 'site_static/images/banner_img9.jpeg' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Main Banner Area End ***** -->
+
+<!-- ***** Suggested Dishes Section Start ***** -->
+<section class="section" id="suggested-dishes">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Suggested Dishes</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Aqui você pode usar um loop para percorrer os pratos sugeridos do banco de dados e exibi-los -->
+            {% for dish in suggested_dishes %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="item">
+                    <img src="{{ dish.image.url }}" alt="{{ dish.name }}">
+                    <h4>{{ dish.name }}</h4>
+                    <p>{{ dish.description }}</p>
+                    <span>Price: {{ dish.price }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ***** Suggested Dishes Section End ***** -->
+
+<!-- ***** User Reviews Section Start ***** -->
+<section class="section" id="user-reviews">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>User Reviews</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <!-- Loop through the database user ratings and display them -->
+            {% for review in user_reviews %}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="item">
+                    <h4>{{ review.user }}</h4>
+                    <p>{{ review.comment }}</p>
+                    <span>Rating: {{ review.rating }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ***** User Reviews Section End ***** -->
+
+<script>
+    $(document).ready(function(){
+      $('.main-banner-carousel').owlCarousel({
+        items: 1, // Set the number of items to display
+        loop: true, // Enable carousel loop
+        autoplay: true, // Activate autoplay
+        autoplayTimeout: 3000, // Sets the pause time between slides (in milliseconds)
+        autoplayHoverPause: true // Pause autoplay when hovering over carousel
+      });
+    });
+</script>
 
 {% endblock body %}
