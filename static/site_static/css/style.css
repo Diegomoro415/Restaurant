@@ -97,3 +97,13 @@ footer img {
   height: 100px;
   margin-top: -30px;
 }
+
+/* Login */
+
+.container {
+  margin-bottom: 3rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}

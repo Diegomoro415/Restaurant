@@ -17,9 +17,17 @@ def home_view(request):
 
 def suggested_dishes(request):
     dishes = SuggestedDish.objects.all()
-    return render(request, 'Home/suggested_dishes.html', {'dishes': dishes})
+
+    context = {
+        'dishes': dishes
+    }
+    return render(request, 'Home/suggested_dishes.html', context)
 
 def user_reviews(request):
     reviews = UserReview.objects.all()
-    print(reviews)
-    return render(request, 'Home/user_reviews.html', {'reviews': reviews})
+    
+    context = {
+        'reviews': reviews
+    }
+
+    return render(request, 'Home/user_reviews.html', context)
