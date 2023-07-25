@@ -10,7 +10,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('home')  # Redirecionar para a página de boas-vindas após o login
+            return redirect('home:home')  # Send user to home page after login
     else:
         form = AuthenticationForm()
 
@@ -22,8 +22,7 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # Redirecionar para a página de boas-vindas após o registro
-    else:
+            return redirect('home:home')  # Send user to home page after register
         form = UserCreationForm()
 
     return render(request, 'Accounts/register.html', {'form': form})
@@ -32,4 +31,4 @@ def register_view(request):
 @login_required
 def logout_view(request):
     logout(request)
-    return redirect('login')  # Redirecionar para a página de login após o logout
+    return redirect('accounts:login')  # Redirecionar para a página de login após o logout
