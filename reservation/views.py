@@ -1,10 +1,11 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
 from .models import Reservation
 
 
 # Create your views here.
-
+@login_required
 def reservation_view(request):
     if request.method == 'POST':
         name = request.POST['name']
