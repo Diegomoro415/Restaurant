@@ -70,7 +70,27 @@
       </nav>
     </header>
     <!-- ***** Header End ***** -->
-  
+    {% if messages %}
+    <div class="container mt-4">
+        <ul class="messages col-md-12">
+            {% for message in messages %}
+                {% if message.tags %}
+                    {% if message.tags == 'success' %}
+                        <li class="message-success">{{ message }}</li>
+                    {% elif message.tags == 'error' %}
+                        <li class="message-error">{{ message }}</li>
+                    {% else %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endif %}
+                {% else %}
+                    <li>{{ message }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+
 
     {% block body %}
     
@@ -121,6 +141,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'site_static/js/script.js' %}"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

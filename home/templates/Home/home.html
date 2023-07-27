@@ -13,9 +13,9 @@
                     <div class="inner-content">
                         <h4>Uncle Tetsu</h4>
                         <h6>THE BEST EXPERIENCE</h6>
-                            <div class="main-white-button scroll-to-section">
-                                <a href="{% url 'reservation:reservation' %}">Make A Reservation</a>
-                            </div>
+                        <div class="main-white-button scroll-to-section">
+                            <a href="{% url 'reservation:reservation' %}">Make A Reservation</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,6 @@
             </div>
         </div>
         <div class="row">
-            <!-- Aqui você pode usar um loop para percorrer os pratos sugeridos do banco de dados e exibi-los -->
             {% for dish in suggested_dishes %}
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="item">
@@ -104,16 +103,8 @@
 </section>
 <!-- ***** User Reviews Section End ***** -->
 
-<script>
-    $(document).ready(function(){
-      $('.main-banner-carousel').owlCarousel({
-        items: 1, // Set the number of items to display
-        loop: true, // Enable carousel loop
-        autoplay: true, // Activate autoplay
-        autoplayTimeout: 3000, // Sets the pause time between slides (in milliseconds)
-        autoplayHoverPause: true // Pause autoplay when hovering over carousel
-      });
-    });
-</script>
-
+{% block scripts %}
+  <!-- Load script.js file -->
+  <script src="{% static 'site_static/js/script.js' %}"></script>
+{% endblock scripts %}
 {% endblock body %}

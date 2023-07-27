@@ -187,7 +187,7 @@ footer.text-center.py-3 {
 }
 
 
-/* Login */
+/* Log in */
 
 .container {
   margin-bottom: 3rem;
@@ -199,4 +199,26 @@ footer.text-center.py-3 {
 
 .text-center {
   height: 3rem;
+}
+
+li.success.info {
+  color: green;
+  list-style: none;
+  padding: 1rem;
+  border: 1px solid green;
+  background-color: #b2ebbe;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Log out */
+
+li.error.info {
+  color: red;
+  list-style: none;
+  padding: 1rem;
+  border: 1px solid red;
+  background-color: #efc1c1;
+  text-align: center;
+  margin-top: 1rem;
 }

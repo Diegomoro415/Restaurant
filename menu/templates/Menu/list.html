@@ -79,19 +79,12 @@
 </section>
 <!-- ***** Menu List Area Ends ***** -->
 
-<script>
-    $(document).ready(function(){
-      $('.main-banner-carousel').owlCarousel({
-        items: 1, // Set the number of items to display
-        loop: true, // Enable carousel loop
-        autoplay: true, // Activate autoplay
-        autoplayTimeout: 3000, // Sets the pause time between slides (in milliseconds)
-        autoplayHoverPause: true // Pause autoplay when hovering over carousel
-      });
-    });
-</script>
-
+{% block scripts %}
+  <!-- Load script.js file -->
+  <script src="{% static 'site_static/js/script.js' %}"></script>
+{% endblock scripts %}
 {% endblock body %}
+
 
 
 
