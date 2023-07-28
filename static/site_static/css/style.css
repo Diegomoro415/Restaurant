@@ -222,3 +222,34 @@ li.error.info {
   text-align: center;
   margin-top: 1rem;
 }
+
+
+.row.justify-content-center {
+  margin: 1rem;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+h2.text-center.mb-4 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+button.btn.btn-primary.btn-block {
+  margin-top: 5rem;
+}
+
+p.p-signin {
+  margin-top: 4rem;
+
+
+} 
+
+p.p-signup {
+    text-align: center;
+    margin: 3rem;
+}
+
+a.btn-floating {
+  font-size: 1.2rem;
+}

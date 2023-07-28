@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load socialaccount %}
 {% load crispy_forms_tags %}
 
 {% block body %}
@@ -6,6 +7,23 @@
   <div class="row justify-content-center mt-5">
     <div class="col-md-6">
       <h2 class="text-center mb-4">Sign Up</h2>
+      <div class="text-center mb-3">
+        <p>Sign up with:</p>
+        <a href="{% provider_login_url 'facebook' %}" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="{% provider_login_url 'google' %}" class="btn text-danger btn-link btn-floating mx-1">
+            <i class="fab fa-google"></i>
+        </a>
+        <a href="{% provider_login_url 'twitter' %}" class="btn text-info btn-link btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="{% provider_login_url 'github' %}" class="btn text-dark btn-link btn-floating mx-1">
+            <i class="fab fa-github"></i>
+        </a>
+        
+      </div>
+      <p class='p-signup'>or:</p>
       <form method="post">
         {% csrf_token %}
         {{ form|crispy }}

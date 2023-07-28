@@ -36,6 +36,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['ut-restaurant.herokuapp.com', 'ut-restaurant-d71a0939b77c.herokuapp.com', 'localhost', '127.0.0.1']
 
+SITE_ID = 1
 
 # Application definition
 
@@ -45,8 +46,17 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
+    'allauth.socialaccount.providers.github',
+    'social_django', 
     'cloudinary',
     'crispy_forms',
     'crispy_bootstrap4',
@@ -56,6 +66,61 @@ INSTALLED_APPS = [
     'contact_us',
     'accounts',
 ]
+
+# Configurações de autenticação social
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend', # Para autenticação de usuário padrão
+    'allauth.account.auth_backends.AuthenticationBackend', # Para autenticação social
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        'METHOD': 'oauth2',
+        #'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
+        'SCOPE': ['email', 'public_profile'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'INIT_PARAMS': {'cookie': True},
+        'FIELDS': [
+            'id',
+            'first_name',
+            'last_name',
+            'middle_name',
+            'name',
+            'name_format',
+            'picture',
+            'short_name'
+        ],
+        'EXCHANGE_TOKEN': True,
+        #'LOCALE_FUNC': 'path.to.callable',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v13.0',
+        'GRAPH_API_URL': 'https://graph.facebook.com/v13.0',
+    },
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+    },
+    'twitter': {
+        'APP': {
+            'consumer_key': 'SEU_CONSUMER_KEY_DO_TWITTER',
+            'secret': 'SEU_SECRET_DO_TWITTER',
+            'key': ''
+        }
+    },
+    'github': {
+        'APP': {
+            'client_id': 'SEU_CLIENT_ID_DO_GITHUB',
+            'secret': 'SEU_SECRET_DO_GITHUB',
+            'key': ''
+        }
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -153,3 +218,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'home'
+
+LOGOUT_REDIRECT_URL = 'login'
