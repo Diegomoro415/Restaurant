@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.github',
     'social_django', 
     'cloudinary',
@@ -69,8 +68,8 @@ INSTALLED_APPS = [
 
 # Configurações de autenticação social
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend', # Para autenticação de usuário padrão
-    'allauth.account.auth_backends.AuthenticationBackend', # Para autenticação social
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 SOCIALACCOUNT_PROVIDERS = {
@@ -106,20 +105,6 @@ SOCIALACCOUNT_PROVIDERS = {
         },
         'OAUTH_PKCE_ENABLED': True,
     },
-    'twitter': {
-        'APP': {
-            'consumer_key': 'SEU_CONSUMER_KEY_DO_TWITTER',
-            'secret': 'SEU_SECRET_DO_TWITTER',
-            'key': ''
-        }
-    },
-    'github': {
-        'APP': {
-            'client_id': 'SEU_CLIENT_ID_DO_GITHUB',
-            'secret': 'SEU_SECRET_DO_GITHUB',
-            'key': ''
-        }
-    }
 }
 
 MIDDLEWARE = [
@@ -219,6 +204,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = 'login'
