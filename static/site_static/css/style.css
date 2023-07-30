@@ -271,3 +271,7 @@ a.btn.github-btn.btn-link.btn-floating.mx-1 {
 a.btn.btn-link.btn-floating.mx-1 {
   width: 18rem;
 }
+
+.hidden {
+  display: none;
+}

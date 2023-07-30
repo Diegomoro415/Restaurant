@@ -1,6 +1,7 @@
 from django import forms
 from .models import SuggestedDish, UserReview
 
+
 class SuggestedDishForm(forms.ModelForm):
     class Meta:
         model = SuggestedDish
@@ -9,4 +10,5 @@ class SuggestedDishForm(forms.ModelForm):
 class UserReviewForm(forms.ModelForm):
     class Meta:
         model = UserReview
-        fields = ['name', 'comment', 'rating']
+        fields = ['comment', 'rating']
+        exclude = ['author']

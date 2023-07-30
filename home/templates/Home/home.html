@@ -78,30 +78,42 @@
 <!-- ***** Suggested Dishes Section End ***** -->
 
 <!-- ***** User Reviews Section Start ***** -->
-<section class="section" id="user-reviews">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading">
-                    <h2>User Reviews</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-        <!-- Loop through the database user ratings and display them -->
-            {% for review in user_reviews %}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="item">
-                    <h4>{{ review.user }}</h4>
-                    <p>{{ review.comment }}</p>
-                    <span>Rating: {{ review.rating }}</span>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+<section id="user-reviews">
+    <h2>User Reviews</h2>
+    {% if user_reviews %}
+      <div class="user-reviews-container">
+        {% for review in user_reviews %}
+          <div class="user-review">
+            <!-- Adicione o conteúdo específico para as avaliações de usuários aqui -->
+            <h4>{{ review.author }}</h4>
+            <p>{{ review.comment }}</p>
+            <span>Rating: {{ review.rating }}</span>
+            {% if user.is_authenticated and user == review.author %}
+              <!-- Adicionar links para editar e deletar a avaliação do usuário autenticado -->
+              <a href="{% url 'home:edit_review' review.pk %}">Editar</a>
+              <form action="{% url 'home:delete_review' review.pk %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Deletar</button>
+              </form>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Nenhuma avaliação disponível ainda.</p>
+    {% endif %}
+  
+    <!-- Formulário para envio de nova avaliação (apenas se o usuário estiver autenticado) -->
+    {% if user.is_authenticated %}
+      <div class="user-review-form">
+        <a href="{% url 'home:create_review' %}">Escreva sua avaliação</a>
+      </div>
+    {% else %}
+      <p>Please <a href="{% url 'login' %}">login</a> to make a review.</p>
+    {% endif %}
 </section>
-<!-- ***** User Reviews Section End ***** -->
+  
+<!-- ***** Add Review Section End ***** -->
 
 {% block scripts %}
   <!-- Load script.js file -->

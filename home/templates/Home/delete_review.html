@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- delete_review.html -->
+
+<h2>Deletar Avaliação</h2>
+<p>Deseja mesmo deletar esta avaliação?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar Exclusão</button>
+</form>
+
+
+{% endblock body %}

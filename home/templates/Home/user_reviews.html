@@ -1,24 +1,20 @@
-{% extends 'base.html' %}
+<!-- user_reviews.html -->
 
-{% block body %}
-
-<!-- User Reviews Section -->
-<section class="user-reviews-section">
-    <div class="container">
-      <h2>User Reviews</h2>
-      <div class="row">
-        {% for review in reviews %}
-        <div class="col-lg-6 col-md-12">
-          <div class="user-review">
-            <h4>{{ review.name }}</h4>
-            <p>{{ review.comment }}</p>
-            <p>Rating: {{ review.rating }}</p>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  
-
-{% endblock body %}
+{% for review in user_reviews %}
+<div class="item">
+    <h4>{{ review.author }}</h4>
+    <p>{{ review.comment }}</p>
+    <span>Rating: {{ review.rating }}</span>
+    
+    <!-- Adicionar link para editar avaliação -->
+    <a href="{% url 'home:edit_review' review.pk %}">Editar</a>
+    
+    <!-- Adicionar formulário para deletar avaliação -->
+    <form action="{% url 'home:delete_review' review.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Deletar</button>
+    </form>
+</div>
+{% empty %}
+<p>Nenhuma avaliação disponível ainda.</p>
+{% endfor %}

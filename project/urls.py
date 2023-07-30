@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sumernote/', include('django_summernote.urls')),
     path('home/', include('home.urls', namespace='home')),
     path('menu/', include('menu.urls', namespace='menu')),
     path('reservation/', include('reservation.urls', namespace='reservation')),
