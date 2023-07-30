@@ -2,14 +2,12 @@
 
 {% block body %}
 
-<!-- delete_review.html -->
 
-<h2>Deletar Avaliação</h2>
-<p>Deseja mesmo deletar esta avaliação?</p>
+<h2>Delete Rating</h2>
+<p>Do you really want to delete this review?</p>
 <form method="post">
-    {% csrf_token %}
-    <button type="submit">Confirmar Exclusão</button>
+     {% csrf_token %}
+     <button type="submit">Confirm Delete</button>
 </form>
-
 
 {% endblock body %}

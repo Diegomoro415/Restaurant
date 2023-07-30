@@ -84,36 +84,63 @@
       <div class="user-reviews-container">
         {% for review in user_reviews %}
           <div class="user-review">
-            <!-- Adicione o conteúdo específico para as avaliações de usuários aqui -->
             <h4>{{ review.author }}</h4>
             <p>{{ review.comment }}</p>
             <span>Rating: {{ review.rating }}</span>
             {% if user.is_authenticated and user == review.author %}
-              <!-- Adicionar links para editar e deletar a avaliação do usuário autenticado -->
-              <a href="{% url 'home:edit_review' review.pk %}">Editar</a>
+              <form action="{% url 'home:edit_review' review.pk %}">
+                {% csrf_token %}
+                <button type="submit">Edit</button>
+              </form>
               <form action="{% url 'home:delete_review' review.pk %}" method="post">
                 {% csrf_token %}
-                <button type="submit">Deletar</button>
+                <button type="submit">Delete</button>
               </form>
             {% endif %}
           </div>
         {% endfor %}
       </div>
     {% else %}
-      <p>Nenhuma avaliação disponível ainda.</p>
+      <p>There is no reviews available.</p>
     {% endif %}
   
-    <!-- Formulário para envio de nova avaliação (apenas se o usuário estiver autenticado) -->
+<!-- Form for sending a new evaluation (only if the user is authenticated) -->
     {% if user.is_authenticated %}
-      <div class="user-review-form">
-        <a href="{% url 'home:create_review' %}">Escreva sua avaliação</a>
-      </div>
+    <div class="user-review-form">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#write-review-modal">Escreva sua avaliação</button>
+    </div>
     {% else %}
-      <p>Please <a href="{% url 'login' %}">login</a> to make a review.</p>
+    <p>Please <a href="{% url 'login' %}">login</a> to make a review.</p>
     {% endif %}
 </section>
   
 <!-- ***** Add Review Section End ***** -->
+
+<!-- Modal create_review -->
+
+<!-- Modal -->
+<div class="modal fade" id="write-review-modal" tabindex="-1" role="dialog" aria-labelledby="write-review-modal-label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="write-review-modal-label">Make a review</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2>Write a review</h2>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Send review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% block scripts %}
   <!-- Load script.js file -->

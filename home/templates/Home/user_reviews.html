@@ -9,12 +9,12 @@
     <!-- Adicionar link para editar avaliação -->
     <a href="{% url 'home:edit_review' review.pk %}">Editar</a>
     
-    <!-- Adicionar formulário para deletar avaliação -->
+    <!-- Add form to delete rating -->
     <form action="{% url 'home:delete_review' review.pk %}" method="post">
         {% csrf_token %}
         <button type="submit">Deletar</button>
     </form>
 </div>
 {% empty %}
-<p>Nenhuma avaliação disponível ainda.</p>
+<p>There is no reviews available.</p>
 {% endfor %}
