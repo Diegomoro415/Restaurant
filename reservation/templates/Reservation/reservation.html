@@ -41,14 +41,8 @@
                                 <h4>Table Reservation</h4>
                             </div>
                             <div class="col-lg-6 col-sm-12">
-                                <div class="form-group">
-                                    <input name="name" type="text" id="name" class="form-control" placeholder="Your Name*" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
-                                <div class="form-group">
-                                    <input name="email" type="email" id="email" class="form-control" placeholder="Your Email Address" required>
-                                </div>
+                            <input type="hidden" name="name" value="{{ user.username }}">
+                            <input type="hidden" name="email" value="{{ user.email }}">
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <div class="form-group">

@@ -13,6 +13,12 @@
             <p><strong>Date:</strong> {{ reservation.date }}</p>
             <p><strong>Time:</strong> {{ reservation.time }}</p>
             <p><strong>Message:</strong> {{ reservation.message }}</p>
+            <!--Buttons-->
+            <a href="{% url 'home:home' %}" class="btn btn-primary">Done</a>
+
+            <form method="post" action="{% url 'reservation:cancel_reservation' reservation.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
         </div>
     </div>
 </div>
