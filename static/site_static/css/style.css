@@ -1,11 +1,17 @@
+
 /* Nav Bar */
+.logo{
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+
 .container.mt-4{
   margin: 0;
 }
 
 .navbar {
   padding: 0.5rem 4rem;
-  border-bottom: #FA594A 1px solid;
+  border-bottom: #EB5E28 2px solid;
   margin-top: -15px;
 }
 
@@ -13,17 +19,28 @@
   font-size: 20px;
 }
 
+button.navbar-toggler {
+  margin: -1rem;
+}
+
 /* Main Banner */
 
 .main-banner {
   padding: 30px 0;
+  background-color: #CCC5B9;
+  border-bottom: #EB5E28 2px solid;
 }
 
 .main-banner .left-content {
   margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 4px;
 }
 
+
 .main-banner h4 {
+  color: #252422;
+  text-shadow: 1px 1px 2px #FFFCF2;
   font-family: 'Beach Resort', cursive;
   font-size: 50px;
   font-weight: 700;
@@ -32,6 +49,7 @@
 }
 
 .main-banner h6 {
+  color: #252422;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 15%;
@@ -51,8 +69,8 @@
 .main-white-button a {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #FA594A;
-  color: #FFFFFF;
+  background-color: #EB5E28;
+  color: #FFFCF2;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -63,22 +81,91 @@
   background-color: #FF453A;
 }
 
+/* User Reviews */
+
+.user-review {
+  background-color: #e8e8e8;
+  margin: 1.5rem auto;
+  border-radius: 4px;
+  padding-bottom: 1rem;
+}
+
+#user-reviews>h2 {
+  text-align: center;
+  text-shadow: 1px 1px 2px #000000
+}
+
+.user-reviews-container {
+  margin: 1.5rem;
+}
+
+button.btn.btn-primary.edit-button {
+  margin: 1.5rem 1.5rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 17rem;
+}
+
+button.btn.btn-primary {
+  margin: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 17rem;
+}
+
+button.btn.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #fff;
+}
+
+button.btn.btn-danger {
+  margin: 0 1.5rem;
+  padding: 0.5rem 1.5rem;
+  width: 17rem;
+}
+
+button.btn.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #fff;
+}
+
+/* User Review */
+
+.user-review>h4 {
+margin: 1rem;
+padding: 1rem;
+font-size: 1.7rem;
+font-weight: 600;
+border-bottom: #EB5E28 1px solid;
+}
+
+.user-review>p, span {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+
 /* Footer */
 
+footer.text-center.py-3 {
+  border-top: #EB5E28 2px solid;
+  background-color: #252422;
+  color: #FFFCF2;
+}
+
 footer a {
-  color: #fff;
+  color: #FFFCF2;
   font-size: 25px;
   letter-spacing: 20px;
 }
 
 footer img {
   width: 120px;
-  height: 100px;
-  margin-top: -30px;
+  height: 90px;
 }
 
-footer.text-center.py-3 {
-    height: 14rem;
+.logo-footer {
+  margin: -1rem 0 1rem;
 }
 
 /* Menu */
@@ -275,3 +362,4 @@ a.btn.btn-link.btn-floating.mx-1 {
 .hidden {
   display: none;
 }
+

@@ -90,11 +90,11 @@
             {% if user.is_authenticated and user == review.author %}
               <form action="{% url 'home:edit_review' review.pk %}">
                 {% csrf_token %}
-                <button type="submit">Edit</button>
+                <button class='btn btn-primary edit-button' type="submit">Edit</button>
               </form>
               <form action="{% url 'home:delete_review' review.pk %}" method="post">
                 {% csrf_token %}
-                <button type="submit">Delete</button>
+                <button class='btn btn-danger' type="submit">Delete</button>
               </form>
             {% endif %}
           </div>
@@ -106,8 +106,8 @@
   
 <!-- Form for sending a new evaluation (only if the user is authenticated) -->
     {% if user.is_authenticated %}
-    <div class="user-review-form">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#write-review-modal">Escreva sua avaliação</button>
+    <div class="user-review-form text-center">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#write-review-modal">Send a review</button>
     </div>
     {% else %}
     <p>Please <a href="{% url 'login' %}">login</a> to make a review.</p>
