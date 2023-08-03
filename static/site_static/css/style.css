@@ -11,6 +11,7 @@
 
 .navbar {
   padding: 0.5rem 4rem;
+  background-color: #fff;
   border-bottom: #EB5E28 2px solid;
   margin-top: -15px;
 }
@@ -144,6 +145,30 @@ border-bottom: #EB5E28 1px solid;
   margin: 1rem;
 }
 
+/* Edit Review */
+
+.edit-form {
+  margin: 3rem;
+}
+
+.edit-form>h2 {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+label.requiredField {
+  font-size: larger;
+  font-weight: 400;
+}
+
+.btn.btn-primary.btn-edit {
+  width: auto;
+  margin-left: initial;
+}
+
+select#id_rating {
+  width: min-content;
+}
 
 /* Footer */
 
