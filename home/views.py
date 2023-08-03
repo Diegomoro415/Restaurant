@@ -18,10 +18,10 @@ def home_view(request):
                 review = form.save(commit=False)
                 review.author = request.user
                 review.save()
-                messages.success(request, 'Avaliação enviada com sucesso!')
+                messages.success(request, 'Your review has been sent successfully!')
                 return redirect('home:home_view')
         else:
-            messages.error(request, 'Você precisa fazer login para escrever uma avaliação.')
+            messages.error(request, 'You need to login to write a review.')
             return redirect('login')
 
     else:
@@ -82,5 +82,7 @@ def delete_review(request, pk):
     review = get_object_or_404(UserReview, pk=pk)
     if request.method == 'POST':
         review.delete()
+        messages.error(request, 'Your review has been deleted successfully!')
         return redirect('home:home_view')
+    
     return render(request, 'Home/delete_review.html', {'review': review})

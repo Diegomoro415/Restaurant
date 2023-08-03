@@ -145,10 +145,27 @@ border-bottom: #EB5E28 1px solid;
   margin: 1rem;
 }
 
+a {
+  color: #EB5E28;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-transform: capitalize;
+}
+
+/* Write Review */
+
+textarea#id_comment {
+  width: -webkit-fill-available;
+}
+
 /* Edit Review */
 
 .edit-form {
-  margin: 3rem;
+  max-width: 25rem;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .edit-form>h2 {
@@ -156,32 +173,52 @@ border-bottom: #EB5E28 1px solid;
   margin-bottom: 2rem;
 }
 
-label.requiredField {
+.edit-form>p {
   font-size: larger;
   font-weight: 400;
 }
 
-.btn.btn-primary.btn-edit {
-  width: auto;
-  margin-left: initial;
+/* alert Messages */
+.message-success {
+  color: green;
+  padding: 10px 1rem;
+  border: 1px solid green;
+  background-color: #b2ebbe;
+  list-style: none;
+  border-radius: 7px;
+  text-align: center;
 }
 
-select#id_rating {
-  width: min-content;
+li.messages.col-md-12 {
+  margin-left: 4rem;
 }
+
+.message-error {
+  color: red;
+  padding: 10px 1rem;
+  border: 1px solid red;
+  background-color: #efc1c1;
+  list-style: none;
+  border-radius: 7px;
+  text-align: center;
+}
+
 
 /* Footer */
 
 footer.text-center.py-3 {
   border-top: #EB5E28 2px solid;
   background-color: #252422;
-  color: #FFFCF2;
 }
 
 footer a {
-  color: #FFFCF2;
+  color: #FFF;
   font-size: 25px;
   letter-spacing: 20px;
+}
+
+footer p {
+  color: #CCC5B9;
 }
 
 footer img {
@@ -347,6 +384,12 @@ h2.text-center.mb-4 {
 
 button.btn.btn-primary.btn-block {
   margin-top: 3rem;
+  width: 90%;
+}
+
+button.btn.btn-primary {
+  margin: 1.5rem 1rem;
+  padding: 0.5rem 1.5rem;
 }
 
 p.p-signin {

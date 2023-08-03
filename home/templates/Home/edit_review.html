@@ -1,6 +1,4 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
-
 
 {% block body %}
 
@@ -8,7 +6,7 @@
     <h2>Edit your review</h2>
     <form method="post">
         {% csrf_token %}
-        {% crispy form %}
+        {{ form.as_p }}
         <button class="btn btn-primary btn-edit" type="submit">Save changes</button>
     </form>
 </div>
