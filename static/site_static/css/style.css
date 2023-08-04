@@ -17,7 +17,7 @@
 }
 
 .navbar-nav {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 button.navbar-toggler {
@@ -93,7 +93,6 @@ button.navbar-toggler {
 
 #user-reviews>h2 {
   text-align: center;
-  text-shadow: 1px 1px 2px #000000
 }
 
 .user-reviews-container {
@@ -124,9 +123,9 @@ button.btn.btn-danger {
   width: 17rem;
 }
 
-button.btn.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+button.btn.btn-danger:hover {
+  background-color: #a20707;
+  border-color: #ffffff;
   color: #fff;
 }
 
@@ -145,9 +144,13 @@ border-bottom: #EB5E28 1px solid;
   margin: 1rem;
 }
 
+.home-p {
+  margin-left: 2rem;
+}
+
 a {
   color: #EB5E28;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -271,39 +274,69 @@ footer img {
   font-weight: 300;
 }
 
+.row.contact-contacts span>a {
+  font-size: medium;
+  display: block;
+  margin: -15px 0px;
+}
+
 .btn-group-lg>.btn, .btn-lg {
   right: 16%;
   position: absolute;
   width: 70%;
 }
 
+.btn.btn-primary.reserv-btn {
+  margin: 0;
+  width: -webkit-fill-available;
+}
+
 /* Reservation_Detail */
 
 .container.reservation_detail {
   text-align: center;
-  border: black 1px solid;
-  margin-top: 3rem;
+  text-transform: capitalize;
+  margin: 2rem 0 1rem;
  
 }
 
-.container.reservation_detail h1 {
-  margin: 2rem 0;
+.container.reservation_detail h3 {
+margin-bottom: 3rem;
 }
 
 .container.reservation_detail p {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1rem;
   text-align: right;
+  font-weight: 400;
 }
 
-.container.reservation_detail strong {
+.container.reservation_detail p>strong {
   color: #FF453A;
+  font-weight: 700;
   position: absolute;
   display: block;
 }
 
-.col-md-6.offset-md-3 {
-    margin-bottom: 2rem;
+.section-heading.col-md-12.offset-md-6 h3 {
+  margin: 1.5rem 0 2rem;
+}
+
+.detail-btn.btn.btn-danger.ml-2 {
+  width: 6rem;
+}
+
+a.detail-btn.btn.btn-primary {
+  width: 6rem;
+  margin-right: 1rem;
+}
+
+.btn-group.reserv-op {
+  margin-top: 2rem;
+}
+
+#reserv-details {
+  position: relative;
+  right: -3%;
 }
 
 
@@ -319,6 +352,12 @@ footer img {
 .left-text-content {
   padding-right: 2rem;
   text-align: center;
+}
+
+.contact-info span>a {
+  font-size: medium;
+  display: block;
+  margin: -15px 0px;
 }
 
 /* Maps */
@@ -387,10 +426,6 @@ button.btn.btn-primary.btn-block {
   width: 90%;
 }
 
-button.btn.btn-primary {
-  margin: 1.5rem 1rem;
-  padding: 0.5rem 1.5rem;
-}
 
 p.p-signin {
   margin-top: 4rem;
@@ -427,7 +462,4 @@ a.btn.btn-link.btn-floating.mx-1 {
   width: 18rem;
 }
 
-.hidden {
-  display: none;
-}
 

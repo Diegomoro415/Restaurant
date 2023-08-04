@@ -1,24 +1,39 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="container reservation_detail">
+<div id='reserv-details' class="container">
     <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <h1>Reservation Detail</h1>
-            <p><strong>Reservation ID:</strong> {{ reservation.id }}</p>
-            <p><strong>Name:</strong> {{ reservation.name }}</p>
-            <p><strong>Email:</strong> {{ reservation.email }}</p>
-            <p><strong>Phone:</strong> {{ reservation.phone }}</p>
-            <p><strong>Number of Guests:</strong> {{ reservation.number_of_guests }}</p>
-            <p><strong>Date:</strong> {{ reservation.date }}</p>
-            <p><strong>Time:</strong> {{ reservation.time }}</p>
-            <p><strong>Message:</strong> {{ reservation.message }}</p>
-            <!--Buttons-->
-            <a href="{% url 'home:home' %}" class="btn btn-primary">Done</a>
-
-            <form method="post" action="{% url 'reservation:cancel_reservation' reservation.id %}">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger">Delete</button>
+        <div class="col-md-6 col-lg-6">
+            <div class="left-text-content">
+                <div class="section-heading col-md-12 offset-md-6">
+                    <h3>Thank you for choosing our restaurant. We look forward to serving you!</h3>
+                    <p class='text-danger'>Please note that we are unable to accommodate reservations with more than a 30-minute delay.</p>
+                </div>
+                <!-- Show open reservation information -->                
+                <div class="container reservation_detail">
+                    <div class="row">
+                        <div class=" col-md-12 offset-md-6">
+                            <h4>Your Reservation Details</h4>
+                            <p><strong>Reservation ID:</strong> {{ reservation.id }}</p>
+                            <p><strong>Name:</strong> {{ reservation.name }}</p>
+                            <p><strong>Email:</strong> {{ reservation.email }}</p>
+                            <p><strong>Phone:</strong> {{ reservation.phone }}</p>
+                            <p><strong>Number of Guests:</strong> {{ reservation.number_of_guests }}</p>
+                            <p><strong>Date:</strong> {{ reservation.date }}</p>
+                            <p><strong>Time:</strong> {{ reservation.time }}</p>
+                            <p><strong>Message:</strong> {{ reservation.message }}</p>
+                            <!--Buttons-->
+                            <div class="btn-group reserv-op" role="group" aria-label="Button Group">
+                                <a href="{% url 'home:home' %}" class="detail-btn btn btn-primary">Done</a>
+                                <form method="post" action="{% url 'reservation:cancel_reservation' reservation.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="detail-btn btn btn-danger ml-2">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
