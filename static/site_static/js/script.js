@@ -2,11 +2,11 @@
 
 $(document).ready(function(){
     $('.main-banner-carousel').owlCarousel({
-      items: 1, // Set the number of items to display
-      loop: true, // Enable carousel loop
-      autoplay: true, // Activate autoplay
-      autoplayTimeout: 3000, // Sets the pause time between slides (in milliseconds)
-      autoplayHoverPause: true // Pause autoplay when hovering over carousel
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true
     });
 });
 
@@ -24,3 +24,16 @@ $(document).ready(function () {
 });
 
 
+// Scroll categories Menu
+
+function scrollToCategory(event, category) {
+    event.preventDefault();
+
+    if ($("#" + category).length) {
+      // Get the offset (position) of the target section relative to the top of the page
+      var targetOffset = $("#" + category).offset().top;
+
+      // Animate the scroll to the target section position
+      $("html, body").animate({ scrollTop: targetOffset }, 1000);
+    }
+  }

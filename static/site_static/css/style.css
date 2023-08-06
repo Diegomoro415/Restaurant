@@ -320,6 +320,8 @@ footer img {
 
 #category {
   margin: 1rem;
+  background-color: #d9d7d7;
+  color: #eb5e28;
 }
 
 .menu-item-card:hover .menu-item-details {
@@ -334,6 +336,11 @@ footer img {
   color: #EB5E28;
   font-weight: 700;
   border: #f1f1f1 solid 1px;
+}
+
+.categ-text {
+  text-align: center;
+  margin: 2rem 0 2rem;
 }
 
 /* Reservation */
