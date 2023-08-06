@@ -314,8 +314,26 @@ footer img {
   width: 80%;
 }
 
+#category h2 {
+  margin: 1rem 0 2rem;
+}
+
+#category {
+  margin: 1rem;
+}
+
 .menu-item-card:hover .menu-item-details {
   opacity: 1;
+}
+
+.card-title {
+  color:#EB5E28;
+}
+
+.card-price {
+  color: #EB5E28;
+  font-weight: 700;
+  border: #f1f1f1 solid 1px;
 }
 
 /* Reservation */

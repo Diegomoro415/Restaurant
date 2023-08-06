@@ -5,7 +5,8 @@ from .models import Menu
 
 def menu_list(request):
     menu_list = Menu.objects.all()
-    context = {'menu_list' : menu_list ,}
+    categories = set(menu.category for menu in menu_list)      
+    context = {'menu_list' : menu_list , 'categories': categories,}
 
     return render(request, 'Menu/list.html', context)
 

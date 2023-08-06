@@ -3,6 +3,7 @@ from django.utils.text import slugify
 
 
 class Menu(models.Model):
+    category = models.CharField(max_length=50, default='')
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=500)
     price = models.DecimalField(max_digits=5, decimal_places=2)
