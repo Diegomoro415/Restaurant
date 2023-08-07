@@ -37,3 +37,22 @@ function scrollToCategory(event, category) {
       $("html, body").animate({ scrollTop: targetOffset }, 1000);
     }
   }
+
+
+  // Date Picker
+
+  $(function() {
+    // Initialize the Datepicker
+    $("#date").datepicker({
+      dateFormat: "dd/mm/yy", // Date Format
+      minDate: 0, // Set the current date
+      beforeShowDay: function(date) {
+        // Array with the days of the week restaurant is closed (Monday = 1, Tuesday = 2)
+        var excludedDays = [1, 2];
+
+        // Checks if the day is present in the array of excluded days
+        var day = date.getDay();
+        return [excludedDays.indexOf(day) === -1];
+      }
+    });
+  });

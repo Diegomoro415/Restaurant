@@ -19,14 +19,20 @@
                             <div class="phone">
                                 <i class="fa fa-phone"></i>
                                 <h4>Phone Numbers</h4>
-                                <span><a href="#">080-090-0990</a><br><a href="#">080-090-0880</a></span>
+                                <span class='contact-number' >
+                                    <a href="#">080-090-0990</a><br>
+                                    <a href="#">080-090-0880</a>
+                                </span>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="message">
                                 <i class="fa fa-envelope"></i>
                                 <h4>Emails</h4>
-                                <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
+                                <span class='contact-number'>
+                                    <a href="#">hello@company.com</a><br>
+                                    <a href="#">info@company.com</a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -106,23 +112,10 @@
     </div>
 </section>
 
-<script>
-    $(function() {
-      // Initialize the Datepicker
-      $("#date").datepicker({
-        dateFormat: "dd/mm/yy", // Date Format
-        minDate: 0, // Set the current date
-        beforeShowDay: function(date) {
-          // Array with the days of the week restaurant is closed (Monday = 1, Tuesday = 2)
-          var excludedDays = [1, 2];
+{% block scripts %}
+  <!-- Load script.js file -->
+  <script src="{% static 'site_static/js/script.js' %}"></script>
   
-          // Checks if the day is present in the array of excluded days
-          var day = date.getDay();
-          return [excludedDays.indexOf(day) === -1];
-        }
-      });
-    });
-  </script>
-  
+{% endblock scripts %}
 
 {% endblock body %}

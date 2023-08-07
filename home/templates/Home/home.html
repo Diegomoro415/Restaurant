@@ -55,7 +55,7 @@
       <div class="row">
           <div id="our-id"class="col-lg-6 col-md-12 col-sm-12">
               <div class="left-text-content">
-                  <div class="section-heading">
+                  <div class="section-heading our-restaurant">
                       <h6>- Our Restaurant </h6>
                       <h3>We Leave A Delicious Memory For You</h3>
                   </div>
@@ -83,8 +83,8 @@
         {% for review in user_reviews %}
           <div class="user-review">
             <h4>{{ review.author }}</h4>
-            <p>{{ review.comment }}</p>
-            <span>Rating: {{ review.rating }}</span>
+            <p class='review-content'>{{ review.comment }}</p>
+            <span class='review-content'>Rating: {{ review.rating }}</span>
             {% if user.is_authenticated and user == review.author %}
               <form action="{% url 'home:edit_review' review.pk %}">
                 {% csrf_token %}

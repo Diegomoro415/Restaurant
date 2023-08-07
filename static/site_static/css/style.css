@@ -5,10 +5,6 @@
   margin-top: 1rem;
 }
 
-.container.mt-4{
-  margin: 0;
-}
-
 .navbar {
   padding: 0.5rem 4rem;
   background-color: #fff;
@@ -80,7 +76,9 @@ button.navbar-toggler {
 }
 
 .main-white-button a:hover {
-  background-color: #FF453A;
+  background-color: #f1f1f1;
+  color: #eb5e28;
+  border: #EB5E28 2px solid;
 }
 
 /* Our Restaurant */
@@ -91,7 +89,7 @@ button.navbar-toggler {
   color: #f1f1f1;
 }
 
-.section-heading h3 {
+.our-restaurant h3 {
   text-align: left;
 
 }
@@ -111,7 +109,7 @@ button.navbar-toggler {
   padding: 0 3px 0 3px;
 }
 
-.section-heading h6 {
+.our-restaurant h6 {
   margin: 2rem 0 1rem;
   text-align: left;
   color: #EB5E28;
@@ -198,7 +196,7 @@ button.btn.btn-danger:hover {
   color: #fff;
 }
 
-.user-review>p, span {
+.review-content {
   font-size: 1.2rem;
   margin: 1rem;
 }
@@ -207,7 +205,7 @@ button.btn.btn-danger:hover {
   margin-left: 2rem;
 }
 
-a {
+.link-review {
   color: #EB5E28;
   font-weight: 600;
   text-decoration: none;
@@ -428,7 +426,6 @@ a.detail-btn.btn.btn-primary {
   right: -3%;
 }
 
-
 /* Contact Us */
 .contact-info {
   margin: 1rem;
@@ -447,6 +444,15 @@ a.detail-btn.btn.btn-primary {
   font-size: medium;
   display: block;
   margin: -15px 0px;
+}
+
+.contact-contacts h4 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-number a{
+  margin: 1rem 0 1rem;
+  font-weight: 500;
 }
 
 /* Maps */
@@ -475,6 +481,9 @@ a.detail-btn.btn.btn-primary {
   margin-bottom: 2rem;
 }
 
+.login-msg{
+  margin: 0;
+}
 
 li.success.info {
   color: green;
