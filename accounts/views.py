@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout
+from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -13,7 +13,7 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.info(request, 'You have been successfully logged in.', extra_tags='success')
-            return redirect('home:home')  # Send user to home page after login
+            return redirect('reservation:reservation')  # Send user to home page after login
     else:
         form = AuthenticationForm()
 
@@ -25,8 +25,12 @@ def register_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
-            return redirect('home:home')  # Redirect user to home page after register
+            authenticated_user = authenticate(username=user.username, password=request.POST['password1'])
+            if authenticated_user is not None:
+                login(request, authenticated_user)
+
+            messages.success(request, 'Registration successful. You are now logged in.')
+            return redirect('reservation:reservation')  # Redirect user to home page after register
     else:
         form = UserCreationForm()  # Move this line outside of the if block
 

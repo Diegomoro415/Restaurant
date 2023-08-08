@@ -248,6 +248,7 @@ textarea#id_comment {
   list-style: none;
   border-radius: 7px;
   text-align: center;
+  margin-top: 0.5rem;
 }
 
 li.messages.col-md-12 {
@@ -262,6 +263,7 @@ li.messages.col-md-12 {
   list-style: none;
   border-radius: 7px;
   text-align: center;
+  margin-top: 0.5rem;
 }
 
 
@@ -292,6 +294,12 @@ footer img {
 }
 
 /* Menu */
+
+.menu-nav a {
+  color: #EB5E28;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 
 .menu-item-card {
   position: relative;
@@ -358,8 +366,7 @@ footer img {
 }
 
 .row.contact-contacts span>a {
-  font-size: medium;
-  display: block;
+  font-size: larger;
   margin: -15px 0px;
 }
 
@@ -441,13 +448,12 @@ a.detail-btn.btn.btn-primary {
 }
 
 .contact-info span>a {
-  font-size: medium;
-  display: block;
+  font-size: larger;
   margin: -15px 0px;
 }
 
 .contact-contacts h4 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-number a{
