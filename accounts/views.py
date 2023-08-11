@@ -13,7 +13,7 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.info(request, 'You have been successfully logged in.', extra_tags='success')
-            return redirect('reservation:reservation')  # Send user to home page after login
+            return redirect('reservation:reservation')  # Send user to reservation page after login
     else:
         form = AuthenticationForm()
 
@@ -30,7 +30,7 @@ def register_view(request):
                 login(request, authenticated_user)
 
             messages.success(request, 'Registration successful. You are now logged in.')
-            return redirect('reservation:reservation')  # Redirect user to home page after register
+            return redirect('reservation:reservation')  # Redirect user to reservation page after register
     else:
         form = UserCreationForm()  # Move this line outside of the if block
 

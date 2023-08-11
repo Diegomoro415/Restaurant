@@ -32,7 +32,7 @@ load_dotenv(os.path.join(BASE_DIR, 'env.py'))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ut-restaurant.herokuapp.com', 'ut-restaurant-d71a0939b77c.herokuapp.com', 'localhost', '127.0.0.1']
 
