@@ -25,7 +25,8 @@ def register_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            authenticated_user = authenticate(username=user.username, password=request.POST['password1'])
+            # Authenticate and log in the user
+            authenticated_user = authenticate(username=user.username, password=form.cleaned_data['password1'])
             if authenticated_user is not None:
                 login(request, authenticated_user)
                 messages.success(request, 'Registration successful. You are now logged in.')

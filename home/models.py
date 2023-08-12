@@ -5,19 +5,6 @@ from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
-class SuggestedDish(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField(upload_to='suggested_dishes/')
-    price = models.DecimalField(max_digits=5, decimal_places=2)
-
-    class Meta:
-        verbose_name = 'Suggested Dish'
-        verbose_name_plural = 'Suggested Dishes'
-
-    def __str__(self):
-        return self.name
-    
 class UserReview(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                 default=1)

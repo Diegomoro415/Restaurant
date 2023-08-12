@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import SuggestedDish, UserReview
+from .models import UserReview
 from .forms import UserReviewForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -9,7 +9,6 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def home_view(request):
-    suggested_dishes = SuggestedDish.objects.all()
 
     if request.method == 'POST':
         if request.user.is_authenticated:
@@ -30,22 +29,12 @@ def home_view(request):
     user_reviews = UserReview.objects.all()
 
     context = {
-        'suggested_dishes': suggested_dishes,
         'user_reviews': user_reviews,
         'form': form,
     }
 
     return render(request, 'Home/home.html', context)
 
-
-
-def suggested_dishes(request):
-    dishes = SuggestedDish.objects.all()
-
-    context = {
-        'dishes': dishes
-    }
-    return render(request, 'Home/suggested_dishes.html', context)
 
 
 @login_required
