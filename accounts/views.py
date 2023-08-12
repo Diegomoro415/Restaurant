@@ -28,11 +28,13 @@ def register_view(request):
             authenticated_user = authenticate(username=user.username, password=request.POST['password1'])
             if authenticated_user is not None:
                 login(request, authenticated_user)
-
-            messages.success(request, 'Registration successful. You are now logged in.')
-            return redirect('reservation:reservation')  # Redirect user to reservation page after register
+                messages.success(request, 'Registration successful. You are now logged in.')
+                return redirect('reservation:reservation')  # Redirect user to reservation page after register
+            else:
+                messages.error(request, 'Registration successful, but login failed. Please try logging in.')
+                return redirect('accounts:login')  # Redirect user to login page
     else:
-        form = UserCreationForm()  # Move this line outside of the if block
+        form = UserCreationForm()
 
     return render(request, 'Accounts/register.html', {'form': form})
 
