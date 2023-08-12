@@ -45,11 +45,15 @@ def create_review(request):
             review = form.save(commit=False)
             review.author = request.user
             review.save()
+            messages.success(request, 'Your review has been created successfully!')
             return redirect('home:home_view')
     else:
         form = UserReviewForm()
-
-    return render(request, 'Home/create_review.html', {'form': form})
+    
+    context = {
+        'form': form,
+    }
+    return render(request, 'Home/home.html', context)
 
 def user_reviews(request):
     reviews = UserReview.objects.all()
@@ -74,4 +78,8 @@ def delete_review(request, pk):
         messages.error(request, 'Your review has been deleted successfully!')
         return redirect('home:home_view')
     
-    return render(request, 'Home/delete_review.html', {'review': review})
+    context = {
+        'review': review,
+    }
+
+    return render(request, 'Home/home.html', context)
