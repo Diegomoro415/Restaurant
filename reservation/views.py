@@ -52,7 +52,8 @@ def cancel_reservation(request, reservation_id):
         reservation.save()
         return redirect('reservation:reservation')
 
-    return render(request, 'Reservation/cancel_reservation.html', {'reservation': reservation})
+    return redirect('reservation:reservation')
+
 
 def reservation_detail(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
