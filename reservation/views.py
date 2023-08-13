@@ -3,11 +3,16 @@ from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from .models import Reservation
 
-
-# Create your views here.
 @login_required
 def reservation_view(request):
+    """
+    View to handle creating a new reservation or displaying an existing open reservation.
+
+    If the user has an existing open reservation, display its information.
+    If not, display the reservation form for creating a new reservation.
+    """
     if request.method == 'POST':
+        # Extract reservation details from the form
         user = request.user
         phone = request.POST['phone']
         number_of_guests = request.POST['number-guests']
@@ -15,10 +20,10 @@ def reservation_view(request):
         time = request.POST['time']
         message = request.POST['message']
 
-        # Converting the date format (DD/MM/YYYY)
+        # Convert the date format (DD/MM/YYYY) to (YYYY-MM-DD)
         date = datetime.strptime(date_str, '%d/%m/%Y').strftime('%Y-%m-%d')
 
-        # Create the reservation with the authenticated user's data
+        # Create and save the reservation
         reservation = Reservation(
             user=user,
             name=user.username,
@@ -38,13 +43,18 @@ def reservation_view(request):
         existing_reservation = Reservation.objects.filter(user=request.user, is_cancelled=False).first()
 
         if existing_reservation:
-            # If it already has an open reservation, display the reservation information on the page
+            # If an open reservation exists, display its information
             return render(request, 'Reservation/reservation_options.html', {'reservation': existing_reservation})
         else:
-        # If it doesn't have an open reservation, display the reservation form normally
+            # If no open reservation, display the reservation form
             return render(request, 'Reservation/reservation.html')
 
 def cancel_reservation(request, reservation_id):
+    """
+    View to handle canceling a reservation.
+
+    When a POST request is received, mark the reservation as cancelled and redirect to reservation view.
+    """
     reservation = get_object_or_404(Reservation, id=reservation_id)
 
     if request.method == 'POST':
@@ -54,13 +64,18 @@ def cancel_reservation(request, reservation_id):
 
     return redirect('reservation:reservation')
 
-
 def reservation_detail(request, reservation_id):
+    """
+    View to display details of a specific reservation.
+    """
     reservation = get_object_or_404(Reservation, id=reservation_id)
     return render(request, 'Reservation/reservation_detail.html', {'reservation': reservation})
 
 @login_required
 def reservation_options_view(request):
+    """
+    View to display options for an existing reservation in progress.
+    """
     user = request.user
     reservation_in_progress = Reservation.objects.filter(user=user, is_cancelled=False).first()
     return render(request, 'Reservation/reservation_options.html', {'reservation_in_progress': reservation_in_progress})

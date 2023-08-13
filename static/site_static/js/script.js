@@ -1,58 +1,58 @@
 // Carousel Main Banner
 
 $(document).ready(function(){
-    $('.main-banner-carousel').owlCarousel({
+  // Initialize the Owl Carousel for the main banner
+  $('.main-banner-carousel').owlCarousel({
       items: 1,
       loop: true,
       autoplay: true,
       autoplayTimeout: 3000,
       autoplayHoverPause: true
-    });
+  });
 });
 
-// Login/Logout messages close after 3 seconds
+// Close Login/Logout messages after 3 seconds
 
 $(document).ready(function () {
-    setTimeout(function () {
-        let messages = $(".messages");
-        if (messages.length > 0) {
-            messages.fadeOut(500, function () {
-                $(this).alert('close');
-            });
-        }
-    }, 3000);
+  setTimeout(function () {
+      let messages = $(".messages");
+      if (messages.length > 0) {
+          // Fade out and close the messages after 3 seconds
+          messages.fadeOut(500, function () {
+              $(this).alert('close');
+          });
+      }
+  }, 3000);
 });
 
-
-// Scroll categories Menu
+// Scroll to categories in Menu
 
 function scrollToCategory(event, category) {
-    event.preventDefault();
+  event.preventDefault();
 
-    if ($("#" + category).length) {
+  if ($("#" + category).length) {
       // Get the offset (position) of the target section relative to the top of the page
       var targetOffset = $("#" + category).offset().top;
 
       // Animate the scroll to the target section position
       $("html, body").animate({ scrollTop: targetOffset }, 1000);
-    }
   }
+}
 
+// Date Picker
 
-  // Date Picker
-
-  $(function() {
-    // Initialize the Datepicker
-    $("#date").datepicker({
+$(function() {
+  // Initialize the Datepicker
+  $("#date").datepicker({
       dateFormat: "dd/mm/yy", // Date Format
-      minDate: 0, // Set the current date
+      minDate: 0, // Set the current date as the minimum date
       beforeShowDay: function(date) {
-        // Array with the days of the week restaurant is closed (Monday = 1, Tuesday = 2)
-        var excludedDays = [1, 2];
+          // Array with the days of the week when the restaurant is closed (Monday = 1, Tuesday = 2, etc.)
+          var excludedDays = [1, 2]; // For example, excluding Monday and Tuesday
 
-        // Checks if the day is present in the array of excluded days
-        var day = date.getDay();
-        return [excludedDays.indexOf(day) === -1];
+          // Check if the day is present in the array of excluded days
+          var day = date.getDay();
+          return [excludedDays.indexOf(day) === -1];
       }
-    });
   });
+});

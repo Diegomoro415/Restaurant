@@ -6,6 +6,9 @@ from .forms import UserReviewForm
 
 @admin.register(UserReview)
 class UserReviewAdmin(admin.ModelAdmin):
+    """
+    Admin configuration for the UserReview model.
+    """
     # Prepopulate the 'slug' field based on the 'author' field
     prepopulated_fields = {'slug': ('author',)}
     
@@ -27,7 +30,12 @@ class UserReviewAdmin(admin.ModelAdmin):
     # Define a custom action to approve selected reviews
     actions = ['approve_reviews']
 
-    # Custom action to approve selected reviews
     def approve_reviews(self, request, queryset):
+        """
+        Custom action to approve selected reviews.
+
+        :param request: The HTTP request object.
+        :param queryset: A queryset of UserReview objects to be approved.
+        """
         queryset.update(approved=True)
         self.message_user(request, f"{queryset.count()} review(s) have been approved.")

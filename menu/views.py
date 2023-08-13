@@ -1,8 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Menu
 
-# View to list menu items and categorize them
 def menu_list(request):
+    """
+    View to list menu items and categorize them.
+
+    :param request: The HTTP request object.
+    :return: Rendered HTML template with menu items and categories.
+    """
     # Retrieve all menu items from the database
     menu_list = Menu.objects.all()
     
@@ -15,10 +20,16 @@ def menu_list(request):
     # Render the 'list.html' template with the provided context
     return render(request, 'Menu/list.html', context)
 
-# View to display details of a specific menu item
 def menu_detail(request, slug):
+    """
+    View to display details of a specific menu item.
+
+    :param request: The HTTP request object.
+    :param slug: The slug of the menu item.
+    :return: Rendered HTML template with menu item details.
+    """
     # Retrieve the menu item with the specified slug from the database
-    menu_detail = Menu.objects.get(slug=slug)
+    menu_detail = get_object_or_404(Menu, slug=slug)
     
     # Define the context data to be passed to the template
     context = {'menu_detail': menu_detail}

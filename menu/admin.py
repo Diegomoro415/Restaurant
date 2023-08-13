@@ -1,17 +1,16 @@
 from django.contrib import admin
 from .models import Menu
 
-# Register the Menu model with the admin site using a decorator
 @admin.register(Menu)
 class MenuAdmin(admin.ModelAdmin):
-    # Customize the displayed columns in the list view of the admin
+    """
+    Custom admin options for the Menu model.
+
+    This class defines customizations for the admin interface of the Menu model,
+    including displayed columns, filters, search fields, and default sorting order.
+    """
+
     list_display = ('name', 'category', 'price')
-    
-    # Add a filter sidebar to filter by category
     list_filter = ('category',)
-    
-    # Add search fields for name and category
     search_fields = ('name', 'category')
-    
-    # Define the default sorting order for the list view
     ordering = ('name',)

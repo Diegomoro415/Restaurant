@@ -3,7 +3,14 @@ from accounts.models import CustomUser
 from django.contrib.auth.models import Group, Permission
 
 class CustomUserTestCase(TestCase):
+    """
+    Test suite for the CustomUser model.
+    """
+
     def setUp(self):
+        """
+        Set up the test environment by creating a test user.
+        """
         # Create a test user for each test method
         self.user = CustomUser.objects.create_user(
             username='testuser',
@@ -14,17 +21,24 @@ class CustomUserTestCase(TestCase):
         )
 
     def test_user_creation(self):
-        # Test if the user is created correctly with expected fields
+        """
+        Test if the user is created correctly with expected fields.
+        """
         self.assertEqual(self.user.username, 'testuser')
         self.assertEqual(self.user.email, 'testuser@example.com')
         self.assertEqual(self.user.name, 'Test User')
         self.assertEqual(self.user.phone, '1234567890')
 
     def test_user_str_representation(self):
-        # Test if the __str__ representation of the user is correct
+        """
+        Test if the __str__ representation of the user is correct.
+        """
         self.assertEqual(str(self.user), 'testuser')
 
     def test_user_groups_and_permissions(self):
+        """
+        Test user's group and permission associations.
+        """
         # Create a test group
         group = Group.objects.create(name='Test Group')
         # Add the test group to the user's groups

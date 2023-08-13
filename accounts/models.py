@@ -3,6 +3,10 @@ from django.db import models
 
 # Custom user model extending AbstractUser
 class CustomUser(AbstractUser):
+    """
+    This model includes additional fields for the user's name and phone number.
+    It also maintains many-to-many relationships with Group and Permission models.
+    """
     name = models.CharField(max_length=100)  # Additional field for user's name
     email = models.EmailField(unique=True)  # Email field with uniqueness constraint
     phone = models.CharField(max_length=20, blank=True)  # Field for user's phone number (optional)
@@ -20,4 +24,7 @@ class CustomUser(AbstractUser):
     )
 
     def __str__(self):
+        """
+        Returns the username as the string representation of the user.
+        """
         return self.username  # Return the username as the string representation

@@ -6,6 +6,10 @@ from django.contrib import messages
 
 # View to handle user login
 def login_view(request):
+    """
+    Allows users to log in using the AuthenticationForm.
+    Redirects to the reservation page upon successful login.
+    """
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
@@ -20,6 +24,11 @@ def login_view(request):
 
 # View to handle user registration
 def register_view(request):
+    """
+    Allows users to register using the UserCreationForm.
+    Authenticates and logs in the user upon successful registration.
+    Redirects to the reservation page after successful registration and login.
+    """
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -41,6 +50,9 @@ def register_view(request):
 # View to handle user logout (requires authentication)
 @login_required
 def logout_view(request):
+    """
+    Requires authentication. Logs the user out and redirects to the home page.
+    """
     logout(request)
     messages.info(request, 'You have been successfully logged out.', extra_tags='error')
     return redirect('home:home')  # Redirect user to home page after logout

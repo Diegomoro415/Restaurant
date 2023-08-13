@@ -4,10 +4,13 @@ from .forms import UserReviewForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
-
 def home_view(request):
-    # Handle form submission to create a new review
+    """
+    Display the home page with user reviews and a form to submit new reviews.
+    
+    :param request: The HTTP request object.
+    :return: Rendered HTML template for the home page.
+    """
     if request.method == 'POST':
         if request.user.is_authenticated:
             form = UserReviewForm(request.POST)
@@ -23,7 +26,6 @@ def home_view(request):
     else:
         form = UserReviewForm()
 
-    # Retrieve all user reviews
     user_reviews = UserReview.objects.all()
 
     context = {
@@ -35,7 +37,12 @@ def home_view(request):
 
 @login_required
 def create_review(request):
-    # Handle form submission to create a new review (requires user to be logged in)
+    """
+    Create a new review (requires user to be logged in).
+    
+    :param request: The HTTP request object.
+    :return: Rendered HTML template for creating a review.
+    """
     if request.method == 'POST':
         form = UserReviewForm(request.POST)
         if form.is_valid():
@@ -53,12 +60,23 @@ def create_review(request):
     return render(request, 'Home/home.html', context)
 
 def user_reviews(request):
-    # Display a page showing all user reviews
+    """
+    Display a page showing all user reviews.
+    
+    :param request: The HTTP request object.
+    :return: Rendered HTML template for displaying user reviews.
+    """
     reviews = UserReview.objects.all()
     return render(request, 'Home/user_reviews.html', {'user_reviews': reviews})
 
 def edit_review(request, pk):
-    # Handle form submission to edit an existing review
+    """
+    Edit an existing review.
+    
+    :param request: The HTTP request object.
+    :param pk: The primary key of the review to be edited.
+    :return: Rendered HTML template for editing a review.
+    """
     review = get_object_or_404(UserReview, pk=pk)
     if request.method == 'POST':
         form = UserReviewForm(request.POST, instance=review)
@@ -70,7 +88,13 @@ def edit_review(request, pk):
     return render(request, 'Home/edit_review.html', {'form': form})
 
 def delete_review(request, pk):
-    # Handle deletion of a review
+    """
+    Delete a review.
+    
+    :param request: The HTTP request object.
+    :param pk: The primary key of the review to be deleted.
+    :return: Rendered HTML template for deleting a review.
+    """
     review = get_object_or_404(UserReview, pk=pk)
     if request.method == 'POST':
         review.delete()

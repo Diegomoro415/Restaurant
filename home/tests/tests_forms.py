@@ -4,7 +4,9 @@ from home.models import UserReview
 
 class UserReviewFormTest(TestCase):
     def test_user_review_form_valid_data(self):
-        # Test that UserReviewForm is valid with correct data
+        """
+        Test that UserReviewForm is valid with correct data.
+        """
         form = UserReviewForm(data={
             'comment': 'This is a test comment',
             'rating': 5,
@@ -12,7 +14,9 @@ class UserReviewFormTest(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_user_review_form_empty_data(self):
-        # Test that UserReviewForm is invalid with empty data
+        """
+        Test that UserReviewForm is invalid with empty data.
+        """
         form = UserReviewForm(data={})
         self.assertFalse(form.is_valid())
         # Expecting two errors as 'comment' and 'rating' are required fields
