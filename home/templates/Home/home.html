@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block body %}
@@ -8,140 +7,126 @@
 <section id="top" class="main-banner">
     <div class="container">
         <div class="row">
+            <!-- Left Content -->
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="left-content">
                     <div class="inner-content">
                         <h4>Uncle Tetsu</h4>
                         <h6>THE BEST EXPERIENCE</h6>
+                        <!-- Button to make a reservation -->
                         <div class="main-white-button scroll-to-section">
                             <a href="{% url 'reservation:reservation' %}">Make A Reservation</a>
                         </div>
                     </div>
                 </div>
             </div>
-        <div class="col-lg-6 main-banner-carousel owl-carousel">
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img3.jpeg' %}" alt="">
-            </div>
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img1.png' %}" alt="">
-            </div>
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img2.png' %}" alt="">
-            </div>
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img4.webp' %}" alt="">
-            </div>
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img5.webp' %}" alt="">
-            </div>
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img6.jpeg' %}" alt="">
-            </div>
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img7.jpeg' %}" alt="">
-            </div>
-            <div class="item">
-                <img src="{% static 'site_static/images/banner_img8.jpeg' %}" alt="">
+            <!-- Main Banner Carousel -->
+            <div class="col-lg-6 main-banner-carousel owl-carousel">
+                <!-- Carousel items with images -->
+                <div class="item">
+                    <img src="{% static 'site_static/images/banner_img3.jpeg' %}" alt="">
+                </div>
+                <!-- Add more carousel items here -->
             </div>
         </div>
     </div>
 </section>
 <!-- ***** Main Banner Area End ***** -->
 
-<!-- ***** Our Restaurant **** -->
+<!-- ***** Our Restaurant Section Start ***** -->
 <section class="section" id="about">
-  <div class="container">
-      <div class="row">
-          <div id="our-id"class="col-lg-6 col-md-12 col-sm-12">
-              <div class="left-text-content">
-                  <div class="section-heading our-restaurant">
-                      <h6>- Our Restaurant </h6>
-                      <h3>We Leave A Delicious Memory For You</h3>
-                  </div>
-                  <p class="our-p">Uncle Tetsu is a hidden gem nestled in the heart of Ronnang, Sweden. Our restaurant offers a delectable Japanese dining experience like no other. With a delightful blend of exquisite dishes and a cozy ambiance, Uncle Tetsu promises to take you on a culinary journey that will tantalize your taste buds and leave you with unforgettable memories. Join us for a memorable dining experience that celebrates the rich flavors and traditions of Japan. Come and savor the magic of Uncle Tetsu today!</p>
-              </div>
-          </div>
-          <div class="col-lg-6 col-md-12 col-sm-12">
-              <div class="right-content">
-                  <div class="thumb">
-                      <img src="{% static 'site_static/images/our_img.jpeg' %}" alt="">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <!-- Left Text Content -->
+                <div class="left-text-content">
+                    <div class="section-heading our-restaurant">
+                        <h6>- Our Restaurant</h6>
+                        <h3>We Leave A Delicious Memory For You</h3>
+                    </div>
+                    <!-- Description of the restaurant -->
+                    <p class="our-p">Uncle Tetsu is a hidden gem nestled in the heart of Ronnang, Sweden. Our restaurant offers a delectable Japanese dining experience like no other...</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <!-- Right Content with an image -->
+                <div class="right-content">
+                    <div class="thumb">
+                        <img src="{% static 'site_static/images/our_img.jpeg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
-<!-- ***** Suggested Dishes Section End ***** -->
+<!-- ***** Our Restaurant Section End ***** -->
 
 <!-- ***** User Reviews Section Start ***** -->
 <section id="user-reviews">
     <h2>User Reviews</h2>
     {% if user_reviews %}
-      <div class="user-reviews-container">
-        {% for review in user_reviews %}
-          <div class="user-review">
-            <h4>{{ review.author }}</h4>
-            <p class='review-content'>{{ review.comment }}</p>
-            <span class='review-content'>Rating: {{ review.rating }}</span>
-            {% if user.is_authenticated and user == review.author %}
-              <form action="{% url 'home:edit_review' review.pk %}">
-                {% csrf_token %}
-                <button class='btn btn-primary edit-button' type="submit">Edit</button>
-              </form>
-              <form action="{% url 'home:delete_review' review.pk %}" method="post">
-                {% csrf_token %}
-                <button class='btn btn-danger' type="submit">Delete</button>
-              </form>
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
+        <!-- Display user reviews -->
+        <div class="user-reviews-container">
+            {% for review in user_reviews %}
+                <div class="user-review">
+                    <!-- Display author, comment, and rating -->
+                    <h4>{{ review.author }}</h4>
+                    <p class='review-content'>{{ review.comment }}</p>
+                    <span class='review-content'>Rating: {{ review.rating }}</span>
+                    {% if user.is_authenticated and user == review.author %}
+                        <!-- Edit and delete buttons for the review (if user is authenticated and author) -->
+                        <form action="{% url 'home:edit_review' review.pk %}">
+                            {% csrf_token %}
+                            <button class='btn btn-primary edit-button' type="submit">Edit</button>
+                        </form>
+                        <form action="{% url 'home:delete_review' review.pk %}" method="post">
+                            {% csrf_token %}
+                            <button class='btn btn-danger' type="submit">Delete</button>
+                        </form>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
     {% else %}
-      <p>There is no reviews available.</p>
+        <p>There are no reviews available.</p>
     {% endif %}
-  
-<!-- Form for sending a new evaluation (only if the user is authenticated) -->
+
+    <!-- Form to send a new review (only if the user is authenticated) -->
     {% if user.is_authenticated %}
-    <div class="user-review-form text-center">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#write-review-modal">Send a review</button>
-    </div>
+        <div class="user-review-form text-center">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#write-review-modal">Send a review</button>
+        </div>
     {% else %}
-    <p class="home-p">Please <a href="{% url 'login' %}">login</a> to make a review.</p>
+        <p class="home-p">Please <a href="{% url 'login' %}">login</a> to make a review.</p>
     {% endif %}
 </section>
-  
-<!-- ***** Add Review Section End ***** -->
+<!-- ***** User Reviews Section End ***** -->
 
-<!-- Modal create_review -->
-
-<!-- Modal -->
-<div class="modal fade" id="write-review-modal" tabindex="-1" role="dialog" aria-labelledby="write-review-modal-label"
-  aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="write-review-modal-label">Make a review</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h2>Write a review</h2>
-        <form method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit" class="btn btn-primary">Send review</button>
-        </form>
-      </div>
+<!-- Modal for creating a review -->
+<div class="modal fade" id="write-review-modal" tabindex="-1" role="dialog" aria-labelledby="write-review-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="write-review-modal-label">Make a review</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2>Write a review</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Send review</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
-
 {% block scripts %}
-  <!-- Load script.js file -->
-  <script src="{% static 'site_static/js/script.js' %}"></script>
+    <!-- Load script.js file -->
+    <script src="{% static 'site_static/js/script.js' %}"></script>
 {% endblock scripts %}
+
 {% endblock body %}

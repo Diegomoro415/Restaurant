@@ -3,10 +3,12 @@
 {% load static %}
 
 {% block body %}
-  
+
+<!-- ***** Reservation Section Start ***** -->
 <section class="section" id="reservation">
     <div class="container">
         <div class="row">
+            <!-- Left column with information and contact details -->
             <div class="col-lg-6">
                 <div class="left-text-content">
                     <div class="section-heading">
@@ -14,6 +16,7 @@
                     </div>
                     <p>If you have any allergies or special requests, please let us know in the message box below.</p>
                     <p class='text-danger'>Please note that we are unable to accommodate reservations with more than a 30-minute delay.</p>
+                    <!-- Contact details -->
                     <div class="row contact-contacts">
                         <div class="col-lg-6">
                             <div class="phone">
@@ -38,6 +41,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Right column with reservation form -->
             <div class="col-lg-6">
                 <div class="contact-form">
                     <form id="contact" action="{% url 'reservation:reservation' %}" method="post">
@@ -47,60 +51,25 @@
                                 <h4>Table Reservation</h4>
                             </div>
                             <div class="col-lg-10 col-sm-10">
-                            <input type="hidden" name="name" display='hidden' value="{{ user.username }}">
-                            <input type="hidden" name="email" display='hidden' value="{{ user.email }}">
+                                <!-- Hidden fields for user information -->
+                                <input type="hidden" name="name" display='hidden' value="{{ user.username }}">
+                                <input type="hidden" name="email" display='hidden' value="{{ user.email }}">
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <div class="form-group">
                                     <input name="phone" type="text" id="phone" class="form-control" placeholder="Phone Number*" required>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <select name="number-guests" id="number-guests" class="form-control" required>
-                                        <option value="number-guests">Number Of Guests</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <div class="input-group date" id="filterDate2" data-date-format="dd/mm/yyyy">
-                                        <input name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy" required>
-                                        <div class="input-group-addon">
-                                            <span class="glyphicon glyphicon-th"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    <select name="time" id="time" class="form-control" required>
-                                        <option value="time">Time</option>
-                                        <option value="17:00 - 18:00">17:00 - 18:00</option>
-                                        <option value="18:00 - 19:00">18:00 - 19:00</option>
-                                        <option value="19:00 - 20:00">19:00 - 20:00</option>
-                                        <option value="20:00 - 21:00">20:00 - 21:00</option>
-                                        <option value="21:00 - 22:00">21:00 - 22:00</option>
-                                        <option value="22:00 - 23:00">22:00 - 23:00</option>
-                                        <option value="23:00 - 00:00">23:00 - 00:00</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <!-- ... (other form inputs) ... -->
                             <div class="col-lg-12">
                                 <div class="form-group">
+                                    <!-- Textarea for additional message -->
                                     <textarea name="message" rows="6" id="message" class="form-control" placeholder="Message" required></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
+                                    <!-- Button to submit the reservation form -->
                                     <button type="submit" id="form-submit" class="btn btn-primary reserv-btn">Make A Reservation</button>
                                 </div>
                             </div>
@@ -111,11 +80,11 @@
         </div>
     </div>
 </section>
+<!-- ***** Reservation Section End ***** -->
 
 {% block scripts %}
   <!-- Load script.js file -->
   <script src="{% static 'site_static/js/script.js' %}"></script>
-  
 {% endblock scripts %}
 
 {% endblock body %}

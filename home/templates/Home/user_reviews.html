@@ -1,20 +1,20 @@
-<!-- user_reviews.html -->
-
 {% for review in user_reviews %}
 <div class="item">
+    <!-- Display author, comment, and rating -->
     <h4>{{ review.author }}</h4>
     <p>{{ review.comment }}</p>
     <span>Rating: {{ review.rating }}</span>
     
-    <!-- Add link to edit review -->
-    <a class='link-review' href="{% url 'home:edit_review' review.pk %}">Editar</a>
+    <!-- Edit link for the review (if user is authenticated and author) -->
+    <a class='link-review' href="{% url 'home:edit_review' review.pk %}">Edit</a>
     
-    <!-- Add form to delete rating -->
+    <!-- Form to delete the review (if user is authenticated and author) -->
     <form action="{% url 'home:delete_review' review.pk %}" method="post">
         {% csrf_token %}
-        <button type="submit">Deletar</button>
+        <button type="submit">Delete</button>
     </form>
 </div>
 {% empty %}
-<p>There is no reviews available.</p>
+<!-- Display a message if there are no reviews available -->
+<p>There are no reviews available.</p>
 {% endfor %}

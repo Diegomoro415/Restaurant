@@ -4,8 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-# Create your views here.
-
+# View to handle user login
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
@@ -13,13 +12,13 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.info(request, 'You have been successfully logged in.', extra_tags='success')
-            return redirect('reservation:reservation')  # Send user to reservation page after login
+            return redirect('reservation:reservation')  # Redirect user to reservation page after login
     else:
         form = AuthenticationForm()
 
     return render(request, 'Accounts/login.html', {'form': form})
 
-
+# View to handle user registration
 def register_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -39,9 +38,9 @@ def register_view(request):
 
     return render(request, 'Accounts/register.html', {'form': form})
 
-
+# View to handle user logout (requires authentication)
 @login_required
 def logout_view(request):
     logout(request)
     messages.info(request, 'You have been successfully logged out.', extra_tags='error')
-    return redirect('home:home')  # Redirect user to login page after logout
+    return redirect('home:home')  # Redirect user to home page after logout
