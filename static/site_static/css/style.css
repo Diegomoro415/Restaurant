@@ -501,6 +501,12 @@ li.success.info {
   margin-top: 1rem;
 }
 
+/* Register */
+
+.form-group>input {
+  width: 100%;
+}
+
 /* Log out */
 
 li.error.info {
@@ -513,7 +519,7 @@ li.error.info {
   margin-top: 1rem;
 }
 
-
+/* Authentication */
 .row.justify-content-center {
   padding: 0 1.5rem;
 }
