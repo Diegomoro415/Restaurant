@@ -44,12 +44,7 @@
       <!-- Sign-Up Form -->
       <form method="post">
         {% csrf_token %}
-        {{ form.username|as_crispy_field }}
-        
-        {{ form.password1|as_crispy_field }}
-        <small id="hint_id_password1" class="form-text text-muted">Your password can't be too similar to your other personal information. Your password must contain at least 8 characters. Your password can't be a commonly used password. Your password can't be entirely numeric.</small>
-        <br>
-        {{ form.password2|as_crispy_field }}
+        {{ form|crispy }}
         <button type="submit" class="btn btn-primary btn-block mb-4">Sign Up</button>
       </form>
       <!-- Sign-In Link -->

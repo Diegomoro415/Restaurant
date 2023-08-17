@@ -1,13 +1,13 @@
-// Carousel Main Banner
+/*global $, jQuery */
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
   // Initialize the Owl Carousel for the main banner
   $('.main-banner-carousel').owlCarousel({
-      items: 1,
-      loop: true,
       autoplay: true,
+      items: 1,
       autoplayTimeout: 3000,
-      autoplayHoverPause: true
+      autoplayHoverPause: true,
+      loop: true
   });
 });
 
@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 $(document).ready(function () {
   setTimeout(function () {
-      let messages = $(".messages");
+      var messages = $(".messages");
       if (messages.length > 0) {
           // Fade out and close the messages after 3 seconds
           messages.fadeOut(500, function () {
@@ -38,6 +38,10 @@ function scrollToCategory(event, category) {
       $("html, body").animate({ scrollTop: targetOffset }, 1000);
   }
 }
+
+// Declaring 'scrollToCategory' with unused variable 'category'
+/* jshint -W098 */
+var scrollToCategory = scrollToCategory;
 
 // Date Picker
 
