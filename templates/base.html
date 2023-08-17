@@ -19,7 +19,10 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'site_static/css/style.css' %}">
+    
     <!--JQuery CDN -->
     <script
         src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -27,10 +30,18 @@
         crossorigin="anonymous">
     </script>
 
-    <!-- Css -->
-    <link rel="stylesheet" href="{% static 'site_static/css/style.css' %}">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    <!-- Owl Carousel JS -->
+    <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
 
+    <!-- Your Custom Scripts -->
+    <script src="{% static 'site_static/js/script.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <title>Uncle Tetsu Restaurant</title>
   </head>
@@ -137,17 +148,6 @@
     </footer>
     <!-- ***** Footer End ***** -->
     
-    
-    <!-- jQuery, jQuery UI and jQuery UI CSS libraries -->  
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'site_static/js/script.js' %}"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         
   </body>
 </html>

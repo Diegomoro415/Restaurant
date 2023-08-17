@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
 
+
 class ContactUsViewTests(TestCase):
     """
     Test suite for the 'contact_us' view.
@@ -14,6 +15,7 @@ class ContactUsViewTests(TestCase):
         response = self.client.get(reverse('contact_us:contact_us'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'Contact_us/contact_us.html')
+
 
 class ErrorHandlingTests(TestCase):
     """

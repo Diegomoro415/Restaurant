@@ -2,11 +2,14 @@ from django.test import TestCase
 from django.contrib.auth.models import User
 from reservation.models import Reservation
 
+
 class ReservationModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Create a test user and a reservation for testing
-        user = User.objects.create_user(username='testuser', password='testpass')
+        user = User.objects.create_user(
+            username='testuser',
+            password='testpass')
         Reservation.objects.create(
             user=user,
             name='John Doe',

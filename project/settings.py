@@ -34,7 +34,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ut-restaurant.herokuapp.com', 'ut-restaurant-d71a0939b77c.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['ut-restaurant.herokuapp.com',
+                 'ut-restaurant-d71a0939b77c.herokuapp.com',
+                 'localhost',
+                 '127.0.0.1']
 
 SITE_ID = 1
 
@@ -55,7 +58,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
-    'social_django', 
+    'social_django',
     'cloudinary',
     'crispy_forms',
     'crispy_bootstrap4',
@@ -76,7 +79,7 @@ AUTHENTICATION_BACKENDS = [
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
         'METHOD': 'oauth2',
-        #'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
+        # 'SDK_URL': '//connect.facebook.net/{locale}/sdk.js',
         'SCOPE': ['email', 'public_profile'],
         'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
         'INIT_PARAMS': {'cookie': True},
@@ -91,7 +94,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'short_name'
         ],
         'EXCHANGE_TOKEN': True,
-        #'LOCALE_FUNC': 'path.to.callable',
+        # 'LOCALE_FUNC': 'path.to.callable',
         'VERIFIED_EMAIL': False,
         'VERSION': 'v13.0',
         'GRAPH_API_URL': 'https://graph.facebook.com/v13.0',
@@ -154,7 +157,7 @@ DATABASES = {
 
 # DATABASES = {
 #    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#}
+# }
 
 
 # Password validation
@@ -162,16 +165,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator',
     },
 ]
 
@@ -192,7 +199,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = (
+    'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]

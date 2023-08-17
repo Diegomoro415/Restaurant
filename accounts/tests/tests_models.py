@@ -2,6 +2,7 @@ from django.test import TestCase
 from accounts.models import CustomUser
 from django.contrib.auth.models import Group, Permission
 
+
 class CustomUserTestCase(TestCase):
     """
     Test suite for the CustomUser model.

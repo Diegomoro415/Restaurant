@@ -2,6 +2,7 @@ from django.test import TestCase
 from home.forms import UserReviewForm
 from home.models import UserReview
 
+
 class UserReviewFormTest(TestCase):
     def test_user_review_form_valid_data(self):
         """

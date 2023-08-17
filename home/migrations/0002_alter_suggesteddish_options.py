@@ -12,6 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='suggesteddish',
-            options={'verbose_name': 'Suggested Dish', 'verbose_name_plural': 'Suggested Dishes'},
+            options={'verbose_name': 'Suggested Dish',
+                     'verbose_name_plural': 'Suggested Dishes'},
         ),
     ]

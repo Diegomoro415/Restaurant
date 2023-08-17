@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 
+
 class Menu(models.Model):
     """
     Model representing a menu item.
@@ -25,7 +26,8 @@ class Menu(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the save method to automatically generate a slug from the name if it's not provided.
+        Override the save method to automatically generate
+        a slug from the name if it's not provided.
         """
         if not self.slug and self.name:
             self.slug = slugify(self.name)

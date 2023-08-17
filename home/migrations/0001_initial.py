@@ -14,7 +14,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='SuggestedDish',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('description', models.TextField()),
                 ('image', models.ImageField(upload_to='suggested_dishes/')),
@@ -24,10 +28,19 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='UserReview',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False,
+                    verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('comment', models.TextField()),
-                ('rating', models.IntegerField(choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')])),
+                ('rating', models.IntegerField(
+                    choices=[(1, '1'),
+                             (2, '2'),
+                             (3, '3'),
+                             (4, '4'),
+                             (5, '5')])),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
             ],
         ),

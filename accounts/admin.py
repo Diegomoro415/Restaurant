@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .models import CustomUser
 
+
 # Define the new Custom User model
 class CustomUserAdmin(UserAdmin):
     """
@@ -14,6 +15,7 @@ class CustomUserAdmin(UserAdmin):
     List of fields to be displayed in the list view of CustomUser instances
     in the admin panel.
     """
+
 
 # Update the registration of the Custom User model in the admin panel
 admin.site.register(CustomUser, CustomUserAdmin)

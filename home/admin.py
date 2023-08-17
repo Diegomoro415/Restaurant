@@ -4,6 +4,7 @@ from .forms import UserReviewForm
 
 # Register your models here.
 
+
 @admin.register(UserReview)
 class UserReviewAdmin(admin.ModelAdmin):
     """
@@ -11,22 +12,23 @@ class UserReviewAdmin(admin.ModelAdmin):
     """
     # Prepopulate the 'slug' field based on the 'author' field
     prepopulated_fields = {'slug': ('author',)}
-    
+
     # Add filters for author, creation date, and approval status
     list_filter = ('author', 'created_on', 'approved')
-    
+
     # Use Summernote for the 'comment' field in the admin
     summernote_fields = ('comment',)
-    
+
     # Use the custom UserReviewForm for admin form
     form = UserReviewForm
-    
-    # Display author, rating, creation date, and approval status in the list view
+
+    # Display author, rating, creation date,
+    # and approval status in the list view
     list_display = ('author', 'rating', 'created_on', 'approved')
-    
+
     # Enable searching by author and creation date
     search_fields = ('author', 'created_on')
-    
+
     # Define a custom action to approve selected reviews
     actions = ['approve_reviews']
 
@@ -38,4 +40,6 @@ class UserReviewAdmin(admin.ModelAdmin):
         :param queryset: A queryset of UserReview objects to be approved.
         """
         queryset.update(approved=True)
-        self.message_user(request, f"{queryset.count()} review(s) have been approved.")
+        self.message_user(
+            request,
+            f"{queryset.count()} review(s) have been approved.")

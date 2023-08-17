@@ -3,14 +3,17 @@ from django.test import TestCase
 from menu.admin import MenuAdmin
 from menu.models import Menu
 
+
 class MockRequest:
     """A mock class representing an HTTP request."""
+
 
 class MockSuperUser:
     """
     A mock class representing a superuser with permission checking.
 
-    This mock class is used to simulate a superuser with permission checks in tests.
+    This mock class is used to simulate a superuser
+    with permission checks in tests.
     """
 
     def has_perm(self, perm):
@@ -22,12 +25,14 @@ class MockSuperUser:
         """
         return True
 
+
 class MenuAdminTest(TestCase):
     def setUp(self):
         """
         Set up a mock AdminSite and MenuAdmin instance for testing.
 
-        This method is run before each test method to create the necessary instances.
+        This method is run before each test method to
+        create the necessary instances.
         """
         self.site = AdminSite()
         self.menu_admin = MenuAdmin(Menu, self.site)

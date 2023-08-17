@@ -2,11 +2,15 @@ from django.test import TestCase
 from home.models import UserReview
 from django.contrib.auth.models import User
 
+
 class UserReviewModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Set up non-modified objects used by all test methods
-        author = User.objects.create_user(username='testuser', password='12345')
+        author = User.objects.create_user(
+            username='testuser',
+            password='12345'
+        )
         UserReview.objects.create(
             author=author,
             comment='This is a test comment',
@@ -59,7 +63,8 @@ class UserReviewModelTest(TestCase):
         """
         Test that the default ordering for UserReview model is as expected.
         """
-        self.assertEqual(UserReview.objects.get(id=1)._meta.ordering, ['-created_on'])
+        self.assertEqual(
+            UserReview.objects.get(id=1)._meta.ordering, ['-created_on'])
 
     def test_str_method(self):
         """

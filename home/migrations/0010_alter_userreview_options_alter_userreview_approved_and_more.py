@@ -15,7 +15,8 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='userreview',
-            options={'ordering': ['-created_on'], 'verbose_name_plural': 'User Reviews'},
+            options={'ordering': ['-created_on'],
+                     'verbose_name_plural': 'User Reviews'},
         ),
         migrations.AlterField(
             model_name='userreview',
@@ -25,7 +26,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userreview',
             name='author',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Author'),
+            field=models.ForeignKey(
+                default=1,
+                on_delete=django.db.models.deletion.CASCADE,
+                to=settings.AUTH_USER_MODEL,
+                verbose_name='Author'),
         ),
         migrations.AlterField(
             model_name='userreview',
@@ -35,21 +40,33 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userreview',
             name='created_on',
-            field=models.DateTimeField(auto_now_add=True, verbose_name='Created On'),
+            field=models.DateTimeField(
+                auto_now_add=True,
+                verbose_name='Created On'),
         ),
         migrations.AlterField(
             model_name='userreview',
             name='rating',
-            field=models.IntegerField(choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')], verbose_name='Rating'),
+            field=models.IntegerField(
+                choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')],
+                verbose_name='Rating'),
         ),
         migrations.AlterField(
             model_name='userreview',
             name='slug',
-            field=models.SlugField(max_length=200, null=True, unique=True, verbose_name='Slug'),
+            field=models.SlugField(
+                max_length=200,
+                null=True,
+                unique=True,
+                verbose_name='Slug'),
         ),
         migrations.AlterField(
             model_name='userreview',
             name='status',
-            field=models.IntegerField(choices=[(0, 'Draft'), (1, 'Published')], default=0, verbose_name='Status'),
+            field=models.IntegerField(
+                choices=[(0, 'Draft'), (1, 'Published')],
+                default=0,
+                verbose_name='Status',
+            ),
         ),
     ]

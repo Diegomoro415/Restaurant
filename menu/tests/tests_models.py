@@ -1,13 +1,15 @@
 from django.test import TestCase
 from menu.models import Menu
 
+
 class MenuModelTest(TestCase):
 
     def setUp(self):
         """
         Set up a test Menu instance for model testing.
 
-        This method is run before each test method to create the necessary instances.
+        This method is run before each test method to
+        create the necessary instances.
         """
         self.menu = Menu.objects.create(
             category='Appetizer',
@@ -22,7 +24,8 @@ class MenuModelTest(TestCase):
         """
         Test the string representation of the Menu model.
 
-        This test ensures that the __str__ method of the Menu model returns the expected string.
+        This test ensures that the __str__ method of the
+        Menu model returns the expected string.
         """
         self.assertEqual(str(self.menu), 'Crispy Fried Chicken')
 
@@ -30,7 +33,8 @@ class MenuModelTest(TestCase):
         """
         Test that the slug field was set correctly in the Menu model.
 
-        This test checks that the 'slug' field of the Menu model was set correctly during instance creation.
+        This test checks that the 'slug' field of the
+        Menu model was set correctly during instance creation.
         """
         self.assertEqual(self.menu.slug, 'crispy-fried-chicken')
 
@@ -38,7 +42,8 @@ class MenuModelTest(TestCase):
         """
         Test the verbose name of the Menu model.
 
-        This test checks that the verbose name of the Menu model matches the expected value.
+        This test checks that the verbose name of the
+        Menu model matches the expected value.
         """
         self.assertEqual(Menu._meta.verbose_name, 'menu')
 
@@ -46,7 +51,8 @@ class MenuModelTest(TestCase):
         """
         Test the verbose plural name of the Menu model.
 
-        This test checks that the verbose plural name of the Menu model matches the expected value.
+        This test checks that the verbose plural name of the
+        Menu model matches the expected value.
         """
         self.assertEqual(Menu._meta.verbose_name_plural, 'menu')
 
@@ -56,6 +62,7 @@ class MenuModelTest(TestCase):
         """
         Clean up by deleting the test Menu instance.
 
-        This method is run after each test method to delete the test Menu instance.
+        This method is run after each test method to
+        delete the test Menu instance.
         """
         self.menu.delete()

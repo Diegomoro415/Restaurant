@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Reservation(models.Model):
     """
     Model representing a reservation made by a user.
     """
 
-    # A foreign key relationship to the User model, representing the user who made the reservation.
+    # A foreign key relationship to the User model,
+    # representing the user who made the reservation.
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     # The name associated with the reservation.
@@ -35,6 +37,7 @@ class Reservation(models.Model):
 
     def __str__(self):
         """
-        Return a string representation of the reservation, including its ID and name.
+        Return a string representation of the reservation,
+        including its ID and name.
         """
         return f"Reservation {self.id} - {self.name}"

@@ -5,6 +5,7 @@ from django.urls import reverse
 from accounts.admin import CustomUserAdmin
 from accounts.models import CustomUser
 
+
 class CustomUserAdminTest(TestCase):
     """
     Test suite for the CustomUserAdmin class in the admin panel.
@@ -26,8 +27,12 @@ class CustomUserAdminTest(TestCase):
         """
         # Create a superuser for testing
         User = get_user_model()
-        admin_user = User.objects.create_superuser(username='admin', password='password', email='admin@example.com')
-        # Log in the admin user and access the change list page for CustomUser model
+        admin_user = User.objects.create_superuser(
+            username='admin',
+            password='password',
+            email='admin@example.com'
+        )
+        # Log in the admin user and access the change list page
         self.client.force_login(admin_user)
         url = reverse('admin:accounts_customuser_changelist')
         response = self.client.get(url)
@@ -38,7 +43,7 @@ class CustomUserAdminTest(TestCase):
         """
         Test the list display of fields in CustomUserAdmin.
         """
-        # Verify that required fields are present in the list display of CustomUserAdmin
+        # Verify that required fields are present in the list display
         self.assertIn('username', self.user_admin.list_display)
         self.assertIn('email', self.user_admin.list_display)
         self.assertIn('first_name', self.user_admin.list_display)
