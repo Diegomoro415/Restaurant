@@ -19,10 +19,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-    <!-- Css -->
-    <link rel="stylesheet" href="{% static 'site_static/css/style.css' %}">
-    
+
     <!--JQuery CDN -->
     <script
         src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -30,18 +27,10 @@
         crossorigin="anonymous">
     </script>
 
-    <!-- jQuery UI -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="{% static 'site_static/css/style.css' %}">
 
-    <!-- Owl Carousel JS -->
-    <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
 
-    <!-- Your Custom Scripts -->
-    <script src="{% static 'site_static/js/script.js' %}"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <title>Uncle Tetsu Restaurant</title>
   </head>
@@ -51,7 +40,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="{% url 'home:home' %}">
-              <img src="{% static 'site_static/images/ut_logo.png' %}" class='logo' alt="logo" width="150" height="125">
+              <img src="{% static 'site_static/images/ut_logo.png' %}" class='logo' alt="image_logo" width="150" height="125">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -118,16 +107,24 @@
                 <div class="col-lg-12">
                     <ul class="list-inline social-icons">
                         <li class="list-inline-item">
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook Page">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram Page">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://twitter.com/" target="_blank" aria-label="Twitter Page">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank" aria-label="Linkedin Page">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -135,7 +132,7 @@
             <div class="col-lg3">
                 <div class="logo-footer">
                     <a href="home.html">
-                        <img src="{% static 'site_static/images/ut_logo.png' %}" class='logo' alt="Logo">
+                        <img src="{% static 'site_static/images/ut_logo.png' %}" class='logo' alt="image_logo">
                     </a>
                 </div>
             </div>
@@ -148,6 +145,17 @@
     </footer>
     <!-- ***** Footer End ***** -->
     
+    
+    <!-- jQuery, jQuery UI and jQuery UI CSS libraries -->  
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'site_static/js/script.js' %}"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         
   </body>
-</html>
+</html> 

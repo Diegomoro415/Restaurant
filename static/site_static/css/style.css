@@ -67,8 +67,8 @@ button.navbar-toggler {
 .main-white-button a {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #EB5E28;
-  color: #FFFCF2;
+  background-color: #ED7140;
+  color: #000;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -77,8 +77,8 @@ button.navbar-toggler {
 
 .main-white-button a:hover {
   background-color: #f1f1f1;
-  color: #eb5e28;
-  border: #EB5E28 2px solid;
+  color: #000;
+  border: #ED7140 2px solid;
 }
 
 /* Our Restaurant */
@@ -112,7 +112,7 @@ button.navbar-toggler {
 .our-restaurant h6 {
   margin: 2rem 0 1rem;
   text-align: left;
-  color: #EB5E28;
+  color: #f1f1f1;
 }
 
 .thumb img {
@@ -176,6 +176,8 @@ button.btn.btn-primary {
   margin: 1.5rem;
   padding: 0.5rem 1.5rem;
   width: 17rem;
+  background-color: #4DA3FF;
+  color: #000;
 }
 
 button.btn.btn-primary:hover {
@@ -296,7 +298,7 @@ footer img {
 /* Menu */
 
 .menu-nav a {
-  color: #EB5E28;
+  color: #9A360E;
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -379,6 +381,8 @@ footer img {
 .btn.btn-primary.reserv-btn {
   margin: 0;
   width: -webkit-fill-available;
+  background-color: #4DA3FF;
+  color: #000;
 }
 
 div#ui-datepicker-div {
@@ -405,7 +409,7 @@ margin-bottom: 3rem;
 }
 
 .container.reservation_detail p>strong {
-  color: #FF453A;
+  color: #9A360E;
   font-weight: 700;
   position: absolute;
   display: block;
@@ -417,11 +421,15 @@ margin-bottom: 3rem;
 
 .detail-btn.btn.btn-danger.ml-2 {
   width: 6rem;
+  background-color: #E7737F;
+  color: #000;
 }
 
 a.detail-btn.btn.btn-primary {
   width: 6rem;
   margin-right: 1rem;
+  background-color: #4DA3FF;
+  color: #000;
 }
 
 .btn-group.reserv-op {
@@ -450,6 +458,10 @@ a.detail-btn.btn.btn-primary {
 .contact-info span>a {
   font-size: larger;
   margin: -15px 0px;
+}
+
+a {
+  color: #0057A8;
 }
 
 .contact-contacts h4 {
