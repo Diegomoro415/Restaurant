@@ -563,19 +563,19 @@ p.p-signup {
 }
 
 a.btn.facebook-btn.btn-link.btn-floating.mx-1 {
-  background-color: dodgerblue;
-  color: #f4f4f4;
+  background-color: #0057A8;
+  color: #fff;
 }
 
 a.btn.google-btn.btn-link.btn-floating.mx-1 {
-  background-color: #FF453A;
-  color: #f4f4f4;
+  background-color: #B30900;
+  color: #fff;
   margin: 0.7rem;
 }
 
 a.btn.github-btn.btn-link.btn-floating.mx-1 {
   background-color: #1f1c1c;
-  color: #f4f4f4;
+  color: #fff;
 }
 
 a.btn.btn-link.btn-floating.mx-1 {
