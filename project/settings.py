@@ -12,17 +12,15 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
 # import dj_database_url
-if os.path.isfile('env.py'):
-    import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-# Load environment variables from env.py
-load_dotenv(os.path.join(BASE_DIR, 'env.py'))
+if os.path.isfile('env.py'):
+    from env import *
 
 
 # Quick-start development settings - unsuitable for production
@@ -34,10 +32,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ut-restaurant.herokuapp.com',
-                 'ut-restaurant-d71a0939b77c.herokuapp.com',
-                 'localhost',
-                 '127.0.0.1']
+ALLOWED_HOSTS = [
+    'ut-restaurant.herokuapp.com',
+    'ut-restaurant-d71a0939b77c.herokuapp.com',
+    '127.0.0.1',
+    'localhost'
+]
 
 SITE_ID = 1
 
