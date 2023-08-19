@@ -1,7 +1,7 @@
 /*global $, jQuery */
 
+// Initialize the Owl Carousel for the main banner
 jQuery(document).ready(function(){
-  // Initialize the Owl Carousel for the main banner
   $('.main-banner-carousel').owlCarousel({
       autoplay: true,
       items: 1,
@@ -12,7 +12,6 @@ jQuery(document).ready(function(){
 });
 
 // Close Login/Logout messages after 3 seconds
-
 $(document).ready(function () {
   setTimeout(function () {
       var messages = $(".messages");
@@ -26,14 +25,12 @@ $(document).ready(function () {
 });
 
 // Scroll to categories in Menu
-
 function scrollToCategory(event, category) {
   event.preventDefault();
 
   if ($("#" + category).length) {
       // Get the offset (position) of the target section relative to the top of the page
       var targetOffset = $("#" + category).offset().top;
-
       // Animate the scroll to the target section position
       $("html, body").animate({ scrollTop: targetOffset }, 1000);
   }
@@ -53,7 +50,6 @@ $(function() {
       beforeShowDay: function(date) {
           // Array with the days of the week when the restaurant is closed (Monday = 1, Tuesday = 2, etc.)
           var excludedDays = [1, 2]; // For example, excluding Monday and Tuesday
-
           // Check if the day is present in the array of excluded days
           var day = date.getDay();
           return [excludedDays.indexOf(day) === -1];

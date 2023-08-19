@@ -80,7 +80,7 @@
                 <!-- Right Content with an image -->
                 <div class="right-content">
                     <div class="thumb">
-                        <img src="{% static 'site_static/images/our_img.webp' %}" alt="restaurant_img" width='300' height='400' loading="lazy">
+                        <img src="{% static 'site_static/images/our_img.webp' %}" alt="restaurant_img" width='300' height='400' loading="eager">
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@
 
 {% block scripts %}
     <!-- Load script.js file -->
-    <script async src="{% static 'site_static/js/script.js' %}"></script>
+    <script defer src="{% static 'site_static/js/script.js' %}"></script>
 {% endblock scripts %}
 
 {% endblock body %}
