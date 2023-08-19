@@ -35,7 +35,7 @@ button.navbar-toggler {
 }
 
 
-.main-banner h4 {
+.main-banner h1 {
   color: #252422;
   text-shadow: 1px 1px 2px #FFFCF2;
   font-family: 'Beach Resort', cursive;
@@ -45,15 +45,13 @@ button.navbar-toggler {
   margin-top: 5%;
 }
 
-.main-banner h6 {
+.main-banner h2 {
   color: #252422;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 15%;
   margin-left: 20%;
 }
-
-
 
 .main-white-button {
   margin-top: -15px;
@@ -105,10 +103,15 @@ button.navbar-toggler {
   padding: 0 3px 0 3px;
 }
 
-.our-restaurant h6 {
+.our-restaurant h3 {
   margin: 2rem 0 1rem;
   text-align: left;
   color: #f1f1f1;
+  font-size: 11px;
+}
+
+.our-restaurant h4 {
+  font-size: 16px;
 }
 
 .thumb img {
@@ -143,7 +146,7 @@ button.navbar-toggler {
   padding-top: 2rem;
 }
 
-.user-review>h4 {
+.user-review>h5 {
 margin: 1rem;
 padding: 1rem;
 font-size: 1.7rem;
