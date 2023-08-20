@@ -12,8 +12,8 @@
                 <!-- Left content in the main banner -->
                 <div class="left-content">
                     <div class="inner-content">
-                        <h4>Uncle Tetsu</h4>
-                        <h6>THE BEST EXPERIENCE</h6>
+                        <h1>Uncle Tetsu</h1>
+                        <h2>THE BEST EXPERIENCE</h2>
                         <div class="main-white-button scroll-to-section">
                             <!-- Button to make a reservation -->
                             <a href="{% url 'reservation:reservation' %}">Make A Reservation</a>
@@ -54,7 +54,7 @@
 <!-- ***** Main Banner Area End ***** -->
 
 <!-- ***** Menu Categories Nav ***** -->
-<h1 class='categ-text'>Menu</h1>
+<h3 class='categ-text'>Menu</h3>
 <!-- Navigation tabs for menu categories -->
 <ul class="nav nav-tabs justify-content-center menu-nav">
     {% for category in categories %}
@@ -84,7 +84,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <!-- Card for displaying a menu item -->
                 <div class="card mb-4 menu-item-card">
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}" loading="lazy">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}" width='450' height='450'loading="lazy">
                     <div class="menu-item-details">
                         <h5 class="card-title">{{ item.name }}</h5>
                         <p class="card-description">{{ item.description }}</p>

@@ -1,8 +1,10 @@
 
 /* Nav Bar */
-.logo{
+.logo1{
   border-radius: 50px;
   margin-top: 1rem;
+  width: 11.5rem;
+  height: 8rem;
 }
 
 .navbar {
@@ -307,6 +309,10 @@ footer img {
   display: inline-block;
 }
 
+.card-img-top {
+  height: auto;
+}
+
 .menu-item-details {
   position: absolute;
   top: 50%;
@@ -398,7 +404,7 @@ div#ui-datepicker-div {
 }
 
 .container.reservation_detail h3 {
-margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .container.reservation_detail p {
@@ -445,25 +451,16 @@ a.detail-btn.btn.btn-primary {
   margin: 1rem;
 }
 
-.contact-contacts {
-  margin: 3rem 0 3rem -1rem;
-}
-
 .left-text-content {
   padding-right: 2rem;
   text-align: center;
-}
-
-.contact-info span>a {
-  font-size: larger;
-  margin: -15px 0px;
 }
 
 a {
   color: #0057A8;
 }
 
-.contact-contacts h4 {
+.contact-contacts h2 {
   margin-bottom: 0.5rem;
 }
 
@@ -548,8 +545,6 @@ button.btn.btn-primary.btn-block {
 
 p.p-signin {
   margin-top: 4rem;
-
-
 } 
 
 p.p-signup {
