@@ -14,12 +14,26 @@
   margin-top: -15px;
 }
 
+.nav-item.active a {
+  color: black;
+  font-weight: 500;
+}
+
+a.nav-link {
+  color: #474747;
+  font-weight: 300;
+}
+
 .navbar-nav {
   font-size: 1.2rem;
 }
 
 button.navbar-toggler {
   margin: -1rem;
+}
+
+.logout a {
+  color: #a20707;
 }
 
 /* Main Banner */
@@ -87,7 +101,7 @@ button.navbar-toggler {
 
 .our-restaurant h3 {
   text-align: left;
-
+  font-size: 14px;
 }
 
 .our-p {
@@ -204,8 +218,9 @@ button.btn.btn-danger:hover {
   margin: 1rem;
 }
 
-.home-p {
+#user-reviews p {
   margin-left: 2rem;
+  font-weight: 600;
 }
 
 .link-review {
@@ -290,6 +305,7 @@ footer p {
 footer img {
   width: 120px;
   height: 90px;
+  border-radius: 40px;
 }
 
 .logo-footer {
@@ -302,6 +318,11 @@ footer img {
   color: #9A360E;
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+.nav-link-menu {
+  display: block;
+  padding: .5rem 1rem;
 }
 
 .menu-item-card {
@@ -327,8 +348,9 @@ footer img {
   width: 80%;
 }
 
-#category h2 {
+#category h4 {
   margin: 1rem 0 2rem;
+  font-size: 20px;
 }
 
 #category {

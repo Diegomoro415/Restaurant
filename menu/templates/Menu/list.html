@@ -59,7 +59,7 @@
 <ul class="nav nav-tabs justify-content-center menu-nav">
     {% for category in categories %}
     <li class="nav-item">
-        <a class="nav-link" href="#{{ category }}" data-toggle="tab" onclick="scrollToCategory(event, '{{ category }}')">{{ category }}</a>
+        <a class="nav-link-menu" href="#{{ category }}" data-toggle="tab" onclick="scrollToCategory(event, '{{ category }}')">{{ category }}</a>
     </li>
     {% endfor %}
 </ul>
@@ -73,7 +73,7 @@
                 <section id='{{category}}'>
                     <!-- Section heading for the menu category -->
                     <div class="section-heading">
-                        <h2>{{ category }}</h2>
+                        <h4>{{ category }}</h4>
                     </div>
                 </section>
             </div>
@@ -101,7 +101,12 @@
 <!-- ***** Menu List Area Ends ***** -->
 
 {% block scripts %}
-  <!-- Load script.js file -->
-  <script src="{% static 'site_static/js/script.js' %}"></script>
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'site_static/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'site_static/dist/assets/owl.theme.default.min.css' %}">
+    <script src="{% static 'site_static/dist/owl.carousel.min.js' %}"></script>
+    <!-- Load script.js file -->
+    <script defer src="{% static 'site_static/js/script.js' %}"></script>
 {% endblock scripts %}
+
 {% endblock body %}
