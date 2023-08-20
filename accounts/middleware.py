@@ -6,5 +6,5 @@ class CacheControlMiddleware:
 
     def __call__(self, request):
         response = self.get_response(request)
-        patch_cache_control(response, public=True, max_age=2592000)
+        patch_cache_control(response, public=True, max_age=259200)
         return response
