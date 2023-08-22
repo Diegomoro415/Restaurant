@@ -21,7 +21,7 @@
                         <div class="col-lg-6">
                             <div class="phone">
                                 <i class="fa fa-phone"></i>
-                                <h4>Phone Numbers</h4>
+                                <p>Phone Numbers</p>
                                 <span class='contact-number' >
                                     <a href="tel:0800900880">080-090-0990</a><br>
                                     <a href="tel:0800900880">080-090-0880</a>
@@ -31,7 +31,7 @@
                         <div class="col-lg-6">
                             <div class="message">
                                 <i class="fa fa-envelope"></i>
-                                <h4>Emails</h4>
+                                <p>Emails</p>
                                 <span class='contact-number'>
                                     <a href="mailto:hello@company.com">hello@company.com</a><br>
                                     <a href="mailto:hello@company.com">info@company.com</a>
@@ -125,9 +125,9 @@
 </section>
 <!-- ***** Reservation Section End ***** -->
 
-{% block scripts %}
-  <!-- Load script.js file -->
-  <script src="{% static 'site_static/js/script.js' %}"></script>
-{% endblock scripts %}
+
+<!-- Load script.js file -->
+<script defer src="{% static 'site_static/js/script.js' %}"></script>
+
 
 {% endblock body %}

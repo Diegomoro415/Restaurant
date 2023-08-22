@@ -24,23 +24,23 @@
             <div class="col-lg-6 main-banner-carousel owl-carousel">
                 <!-- Carousel items with images -->
                 <div class="item">
-                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/v1692652195/banner_img2_zxz1r8.webp" alt="carousel_img1" width='400' height='300'>
+                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/c_fill,h_338,w_450/v1692560435/static/site_static/images/banner_img5.75b979ad2542.webp" alt="carousel_img1">
                     <button role="button" class="owl-dot" aria-label="Slide 1"></button>
                 </div>
                 <div class="item">
-                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/v1692652195/banner_img4_izokfh.webp" alt="carousel_img2" width='400' height='300'>
+                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/c_fill,h_338,w_450/v1692652195/banner_img4_izokfh.webp" alt="carousel_img2" loading="lazy">
                     <button role="button" class="owl-dot" aria-label="Slide 2"></button>
                 </div>
                 <div class="item">
-                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/c_scale,h_300,w_400/v1692560435/static/site_static/images/banner_img5.75b979ad2542.webp" alt="carousel_img3" width='400' height='300' loading="lazy">
+                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/c_fill,h_338,w_450/v1692652195/banner_img2_zxz1r8.webp" alt="carousel_img3" loading="lazy">
                     <button role="button" class="owl-dot" aria-label="Slide 3"></button>
                 </div>
                 <div class="item">
-                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/v1692560434/static/site_static/images/banner_img6.b6acdb211879.webp" alt="carousel_img4" width='400' height='300' loading="lazy">
+                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/c_fill,h_338,w_450/v1692560434/static/site_static/images/banner_img6.b6acdb211879.webp" alt="carousel_img4" loading="lazy">
                     <button role="button" class="owl-dot" aria-label="Slide 4"></button>
                 </div>
                 <div class="item">
-                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/v1692557016/static/site_static/images/banner_img7.b0203fd5c27a.webp" alt="carousel_img5" width='400' height='300' loading="lazy">
+                    <img src="https://res.cloudinary.com/dp6ccs983/image/upload/c_fill,h_338,w_450/v1692557016/static/site_static/images/banner_img7.b0203fd5c27a.webp" alt="carousel_img5" loading="lazy">
                     <button role="button" class="owl-dot" aria-label="Slide 5"></button>
                 </div>
             </div>
@@ -80,7 +80,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <!-- Card for displaying a menu item -->
                 <div class="card mb-4 menu-item-card">
-                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}" width='450' height='450'loading="lazy">
+                    <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}" width='450' height='450' loading='lazy'>
                     <div class="menu-item-details">
                         <h5 class="card-title">{{ item.name }}</h5>
                         <p class="card-description">{{ item.description }}</p>
@@ -95,5 +95,9 @@
 </div>
 {% endfor %}
 <!-- ***** Menu List Area Ends ***** -->
+
+<!-- Load script.js file -->
+<script defer src="{% static 'site_static/js/script.js' %}"></script>
+
 
 {% endblock body %}
