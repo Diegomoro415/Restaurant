@@ -90,6 +90,12 @@ button.navbar-toggler {
   border: #ED7140 2px solid;
 }
 
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  height: 75%;
+}
+
 /* Our Restaurant */
 
 #about {
