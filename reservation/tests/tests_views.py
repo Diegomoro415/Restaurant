@@ -3,7 +3,6 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from datetime import datetime
 from reservation.models import Reservation
-from reservation.views import cancel_reservation
 
 
 class ReservationViewsTest(TestCase):
@@ -16,14 +15,14 @@ class ReservationViewsTest(TestCase):
             password='testpassword')
         self.reservation = Reservation.objects.create(
             user=self.user,
-            name=self.user,
+            name=self.user.username,
             email=self.user.email,
             phone='1234567890',
             number_of_guests=4,
             date=datetime.now().date(),
             time='18:00',
             message='Test reservation',
-        )
+    )
 
     def test_reservation_view_GET(self):
         """
@@ -32,7 +31,7 @@ class ReservationViewsTest(TestCase):
         self.client.login(username='testuser', password='testpassword')
         response = self.client.get(reverse('reservation:reservation'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'Reservation/reservation.html')
+        self.assertTemplateUsed(response, 'Reservation/reservation_options.html')
 
     def test_reservation_view_POST(self):
         """

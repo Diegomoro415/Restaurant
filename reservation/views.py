@@ -91,4 +91,4 @@ def reservation_options_view(request):
         user=user, is_cancelled=False).first()
     return render(
         request, 'Reservation/reservation_options.html',
-        {'reservation_in_progress': reservation_in_progress})
+        {'reservation': reservation_in_progress})
