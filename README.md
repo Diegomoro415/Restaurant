@@ -2,6 +2,8 @@
 
 ![Responsive Devices](docs/responsive-devices.png)
 
+**Developer: *Diego Moro***
+
 [Visit live website](https://ut-restaurant-d71a0939b77c.herokuapp.com/)  
 (Ctrl + click to open in new tab)
 
@@ -266,4 +268,167 @@ The wireframes were created using Miro
 </details>
 <details><summary>Login</summary>
 <img src="docs/wireframe/wireframe_login.png">
+</details>
+## Technologies Used
+
+### Languages & Frameworks
+
+* HTML
+* CSS
+* Javascript
+* Python
+* Django
+
+
+### Libraries & Tools
+
+- [Website Mockup Generator](https://websitemockupgenerator.com/)
+- [Miro](https://miro.com/)
+- [Bootstrap v4.6](https://getbootstrap.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Favicon.io](https://favicon.io)
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/)
+- [Font Awesome](https://fontawesome.com/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Heroku Platform](https://id.heroku.com/login)
+- [jQuery](https://jquery.com)
+- [Postgres](https://www.postgresql.org/)
+- [Summernote](https://summernote.org/)
+- Validation:
+  - [WC3 Validator](https://validator.w3.org/)
+  - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
+  - [JShint](https://jshint.com/)
+  - [Pycodestyle(PEP8)](https://pypi.org/project/pycodestyle/)
+  - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+  - [Wave Validator](https://wave.webaim.org/)
+
+##### Back to [top](#table-of-contents)
+
+## Features
+
+### Home page
+- Home page includes nav bar, main body and a footer
+
+<details><summary>See feature images</summary>
+
+![Home page](docs/features/feature-homepage.png)
+
+</details>
+
+### Main Banner
+- Contains a button that link users to reservation page.
+- Runs a caroussel of images
+
+<details><summary>See feature images</summary>
+
+![Main Banner](docs/features/feature-mainbanner.png)
+
+</details>
+
+### Logo & Navigation
+- Custom logo for the business
+- Fully Responsive
+- On small screens switches to hamburger menu
+- Indicates login/logout in status
+- displayed on all pages
+
+<details><summary>See feature images</summary>
+
+![Logo Navbar](docs/features/feature-navbar.png)
+![Logo Navbar](docs/features/feature-navbar-mobile.png)
+</details>
+
+### Reviews
+- Contains a lista of reviews made by logged user
+- There are edit and delete button 
+
+<details><summary>See feature images</summary>
+
+![Reviews](docs/features/feature-review.png)
+</details>
+
+### Write Review
+- Contains a message field and a rating button that user can choose scale 1 to 5
+- Button to submit a review
+
+<details><summary>See feature images</summary>
+
+![Write Review](docs/features/feature-write-review.png)
+</details>
+
+### Edit Review
+- Contains a message field and a rating button that user can choose scale 1 to 5
+- Button to save the changes
+
+<details><summary>See feature images</summary>
+
+![Edit Review](docs/features/feature-edit-review.png)
+</details>
+
+### Footer
+- Contains social media links and copyright
+- Logo that link to Homepage
+
+<details><summary>See feature images</summary>
+
+![Footer](docs/features/feature-footer.png)
+</details>
+
+### Menu 
+- Contains category Navbar
+- Contains image items, with name, description and price
+
+<details><summary>See feature images</summary>
+
+![Menu Navbar](docs/features/feature-menu-navbar.png)
+![Menu Items](docs/features/feature-menu.png)
+</details>
+
+### Reservation 
+- Contains a Form with phone nunmber, nunber of guests, date, time and text field
+- Contains business contact information such as phone number and email
+
+<details><summary>See feature images</summary>
+
+![Reservation](docs/features/feature-reservation.png)
+</details>
+
+### Reservation details
+- Contains details of a made reservation
+- Contains a Done button that send user to HomePage and a Delete button that delete the existing reservation
+
+<details><summary>See feature images</summary>
+
+![Reservation](docs/features/feature-reservation-detail.png)
+</details>
+
+### Contact Us
+- Contains opening hours, address and contact information such as phone number and Email.
+- Displays a clickable map that show routes to the restaurant 
+
+<details><summary>See feature images</summary>
+
+![Contact Us](docs/features/feature-contact.png)
+</details>
+
+### Login
+- Contains button to sign in with social media
+- Contains a form to with username and password field
+- Contains a link to register page
+
+<details><summary>See feature images</summary>
+
+![Login](docs/features/feature-login.png)
+</details>
+
+### Register
+- Contains button to  sign up with social media
+- Contains a form to with username, password and password confirmation field
+- Contains a link to sign in page
+
+<details><summary>See feature images</summary>
+
+![Login](docs/features/feature-register.png)
 </details>
