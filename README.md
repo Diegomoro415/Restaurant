@@ -192,7 +192,8 @@ The footer contains all relevant social media links that the business has so the
 Built with Python and the Django framework with a database of a Postgres for the deployed Heroku version(production)
 
 <details><summary>Show diagram</summary>
-![DataBase](docs/database.png)>
+
+![DataBase](docs/database.png)
 </details>
 
 ##### User Model
@@ -432,3 +433,68 @@ The wireframes were created using Miro
 
 ![Login](docs/features/feature-register.png)
 </details>
+
+##### Back to [top](#table-of-contents)<hr>
+
+
+## Validation
+
+The W3C Markup Validation Service
+<details><summary>Home</summary>
+<img src="docs/validations/home_html.png">
+</details>
+
+<details><summary>Menu</summary>
+<img src="docs/validations/menu_html.png">
+</details>
+
+<details><summary>Reservation</summary>
+<img src="docs/validations/reservation_html.png">
+</details>
+
+<details><summary>Contact Us</summary>
+<img src="docs/validations/contact_us_html.png">
+</details>
+
+<details><summary>Login</summary>
+<img src="docs/validations/login_html.png">
+</details>
+
+<details><summary>Register</summary>
+<img src="docs/validations/reservation_html.png">
+</details>
+
+<details><summary>Edit Review</summary>
+<img src="docs/validations/edit_reviews_html.png">
+</details>
+
+<details><summary>Reservation Detail</summary>
+<img src="docs/validations/reservation_details_html">
+</details>
+
+<details><summary>403</summary>
+<img src="docs/validations/error_403.png">
+</details>
+
+<details><summary>404</summary>
+<img src="docs/validations/error_404.png">
+</details>
+
+<details><summary>500</summary>
+<img src="docs/validations/error_500.png">
+</details>
+<hr>
+
+### CSS Validation
+The W3C Jigsaw CSS Validation Service
+
+<details><summary>Style.css</summary>
+<img src="docs/validations/css.png">
+</details><hr>
+
+### JavaScript Validation
+JSHint JS Validation Service
+
+<details><summary>Script.js</summary>
+<img src="docs/validations/script_js.png">
+</details><hr>
