@@ -93,3 +93,33 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
     
 
 ##### Back to [top](#table-of-contents)<hr>
+
+## User Stories
+
+### Users
+
+1. Being a User, I am able to have easy navigation in order to move to each feature of the site.
+2. Being a User, I am able to see dish information(description, image and price) in order to make an informed decision.
+3. Being a User, I am able to easily find the address and location in order to view in a map the directions.
+4. Being a User, I am able to find contact information and opening hours in order to when the business is open and how to contact via phone or email.
+5. Being a User, I am able to find social media icons in order to follow the business social medias.
+6. Being a User, I am able to write reviews, and rating in order to share my experience with others.
+7. Being a User, I am able to edit or delete an existing review in order to update and provide my experience.
+8. Being a User, I am able to sign in/sign up in order to make reservation and write reviews.
+9. Being a User, I am able to make a reservation in order to to take a table for the chosen date, time and number of guests.
+10. Being a User, I am able to see reservation details in order to to accept or delete my reservation.
+
+### Admin / Authorised User
+
+11. Being a Admin, I am able to manually make reservation in order to make reservation when a costumer calls or contact via social medias.
+12. Being a Admin, I am able to authenticate and log into the admin dashboard in order to manage users informations, reservations history and reviews.
+13. Being a Admin, I am able to manage menu items in order to add, delete menu items details.
+14. Being a Admin, I am able to have access to the user reviews in order to manage and moderate all reviews.
+15. Being a Admin, I am able to filter registered users by name, staff status, superuser status in order to easily find a specific user or staff member contact.
+16. Being a Adimin, I am able to filter reservation in order to easily see a reservation by date, author or if reservation is cancelled.
+17. Being a Admin, I am able to view a list of all reservations made by users in order to I can manage all reservations.
+
+### Site Owner
+
+18. Being a Site Owner, I can provide fully responsive site for my costumers in order to have a good experience.
+19. Being a Site Owner, I can provide an intuitive and descritive menu with description, pictures and price for my costumers in order to have a informed decision-making.
