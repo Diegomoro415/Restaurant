@@ -123,3 +123,65 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
 
 18. Being a Site Owner, I can provide fully responsive site for my costumers in order to have a good experience.
 19. Being a Site Owner, I can provide an intuitive and descritive menu with description, pictures and price for my costumers in order to have a informed decision-making.
+
+### Kanban, Epics & User Stories
+- GitHub Kanban was used to track all open user stories
+- Epics were created using the milestones feature
+- Backlog, In Progress, Done headings were used in the kanban
+
+<details><summary>Epics</summary>
+
+![Epics](docs/epics.png)
+![Epic 1](docs/epic1.png)
+![Epic 2](docs/epic2.png)
+![Epic 3](docs/epic3.png)
+![Epic 4](docs/epic4.png)
+</details>
+
+<details><summary>User Stories</summary>
+
+![User stories](docs/user_story.png)
+</details>
+
+<details><summary>Kanban</summary>
+
+![Kanban](docs/kanban_board.png)
+![Kanban finish](docs/kanban_board1.png)
+
+</details>
+
+##### Back to [top](#table-of-contents)<hr>
+
+## Design
+
+### Colours
+
+In the process of craftingthe visual identity, I selected meticulously selected a palette of colors that encapsulate the essence of the brand. Each color holds a purpose and contributes to the overall aesthetic we wish to convey.
+
+The colors I wanted to stay close to  [Coolors.co](https://coolors.co/)
+<details><summary>See colour pallet</summary>
+
+![Palette Colors](docs/palette_colors.png)
+</details>
+
+### Fonts
+
+ None font were selected using the default system font "Helvetica".
+
+ ### Structure
+
+#### Website pages
+
+The site was designed for the user to be familiar with the layout such as a navigation bar along the top of the pages and a hamburger menu button for smaller screen.
+
+The footer contains all relevant social media links that the business has so the user can visit any social media site and follow the business there to expand the businesses followers, likes and shares.
+
+* The sites consists of the folloowing pages:
+    * **Home page** with a main banner that contains caroussel of pictures, a button that takes user to make a reservation and also the review section.
+    * **Menu page** that also contains the main banner, a navbar that displays the differents categories of the dishes, images of the dishes in or menu and a description with price for each option when the cursor is over the image.
+    * **Reservation page** that has a form where user can fill to book a table with personal information and choose date, time, number of guests and also leave a message.
+    * **Contact Us page** contains the business contact informations such as phone number and email, address and a map link.
+    * **Edit Review** for those logged user that want to edit their reviews, the page contains a message field and rating.
+    * **Login / Logout** allows users to login to make bookings, view, edit, and delete bookings
+    * **Register** allows the user to regiser so they can use the booking system and write reviews.
+    * **Error page** to display if a 403, 404 500 error is raised.
