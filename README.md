@@ -185,3 +185,85 @@ The footer contains all relevant social media links that the business has so the
     * **Login / Logout** allows users to login to make bookings, view, edit, and delete bookings
     * **Register** allows the user to regiser so they can use the booking system and write reviews.
     * **Error page** to display if a 403, 404 500 error is raised.
+
+#### Database
+Built with Python and the Django framework with a database of a Postgres for the deployed Heroku version(production)
+
+<details><summary>Show diagram</summary>
+![DataBase](docs/database.png)>
+</details>
+
+##### User Model
+* The User Model contains the following:
+    * id
+    * username
+    * name
+    * email
+    * phone
+    * groups
+    * user_permissions
+    * is_staff
+    * superUser
+    
+##### User Reviews Model
+* The User Reviews Model contains the following:
+    * id
+    * author
+    * comment
+    * rating
+    * created
+    * approved
+    * status
+    * slug
+
+##### Reservation Model
+* The Reservation Model contains the following:
+    * id
+    * user
+    * name
+    * email
+    * phone
+    * numGuests
+    * date
+    * time
+    * message
+    * is_cancelled
+
+##### Menu Model
+* The Menu Model contains the following:
+    * id
+    * category
+    * name
+    * price
+    * image
+    * slug
+
+##### User Login Forms
+* The User Login Forms contains the following:
+    * id
+    * username
+    * password
+
+##### User Registration Form
+* The User Registration Form contains the following:
+    * id
+    * username
+    * password
+
+### Wireframes
+The wireframes were created using Miro
+<details><summary>Home</summary>
+<img src="docs/wireframe/wireframe_home.png">
+</details>
+<details><summary>Menu</summary>
+<img src="docs/wireframe/wireframe_menu.png">
+</details>
+<details><summary>Reservation</summary>
+<img src="docs/wireframe/wireframe_reservation.png">
+</details>
+<details><summary>Contact Us</summary>
+<img src="docs/wireframe/wireframe_contactus.png">
+</details>
+<details><summary>Login</summary>
+<img src="docs/wireframe/wireframe_login.png">
+</details>
