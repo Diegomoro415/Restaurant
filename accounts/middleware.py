@@ -1,5 +1,6 @@
 from django.utils.cache import patch_cache_control
 
+
 class CacheControlMiddleware:
     """
     Middleware to add cache control headers to HTTP responses.
@@ -35,8 +36,10 @@ class CacheControlMiddleware:
             request (HttpRequest): The incoming HTTP request.
 
         Returns:
-            HttpResponse: The processed HTTP response with cache control headers.
+            HttpResponse: The processed HTTP response with
+            cache control headers.
         """
         response = self.get_response(request)
-        patch_cache_control(response, public=True, max_age=259200)
+        patch_cache_control(response,
+                            public=True, max_age=259200)
         return response

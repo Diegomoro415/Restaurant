@@ -2,13 +2,15 @@ from django.test import TestCase, RequestFactory
 from django.http import HttpResponse
 from django.utils.cache import patch_cache_control
 
+
 class CacheControlMiddlewareTestCase(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
 
     def test_cache_control_middleware(self):
         """
-        Test the CacheControlMiddleware by simulating a request and checking the cache control headers.
+        Test the CacheControlMiddleware by simulating a
+        request and checking the cache control headers.
         """
         def mock_get_response(request):
             response = HttpResponse()
@@ -20,6 +22,7 @@ class CacheControlMiddlewareTestCase(TestCase):
         response = middleware(request)
 
         self.assertEqual(response['Cache-Control'], 'public, max-age=259200')
+
 
 # Middleware class
 class CacheControlMiddleware:

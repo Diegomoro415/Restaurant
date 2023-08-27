@@ -22,7 +22,7 @@ class ReservationViewsTest(TestCase):
             date=datetime.now().date(),
             time='18:00',
             message='Test reservation',
-    )
+        )
 
     def test_reservation_view_GET(self):
         """
@@ -31,7 +31,8 @@ class ReservationViewsTest(TestCase):
         self.client.login(username='testuser', password='testpassword')
         response = self.client.get(reverse('reservation:reservation'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'Reservation/reservation_options.html')
+        self.assertTemplateUsed(
+            response, 'Reservation/reservation_options.html')
 
     def test_reservation_view_POST(self):
         """

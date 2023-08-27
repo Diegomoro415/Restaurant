@@ -15,7 +15,8 @@ class MenuViewsTest(TestCase):
         """
         cls.test_image = SimpleUploadedFile(
             name='ut_logo.png',
-            content=open('static/site_static/images/ut_logo.webp', 'rb').read(),
+            content=open(
+                'static/site_static/images/ut_logo.webp', 'rb').read(),
             content_type='image/png'
         )
 

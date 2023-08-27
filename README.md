@@ -43,6 +43,7 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
 - To book a table
 - To be able to view and cancel bookings
 - To view menus with a descritive ingredients
+<hr>
 
 ### Site Owner Goals
 
@@ -50,7 +51,6 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
 - Provide a modern application with an easy navigation
 - Fully responsive and accessible
 - Get User's review for improvement
-<hr>
 
 ## User Experience
 
@@ -94,7 +94,7 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
     * Users want to read reviews and ratings from other diners to gauge the quality of the dining experience.
     
 
-##### Back to [top](#table-of-contents)<hr>
+##### Back to [top](#table-of-contents)
 
 ## User Stories
 
@@ -110,6 +110,7 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
 8. Being a User, I am able to sign in/sign up in order to make reservation and write reviews.
 9. Being a User, I am able to make a reservation in order to to take a table for the chosen date, time and number of guests.
 10. Being a User, I am able to see reservation details in order to to accept or delete my reservation.
+<hr>
 
 ### Admin / Authorised User
 
@@ -120,11 +121,13 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
 15. Being a Admin, I am able to filter registered users by name, staff status, superuser status in order to easily find a specific user or staff member contact.
 16. Being a Adimin, I am able to filter reservation in order to easily see a reservation by date, author or if reservation is cancelled.
 17. Being a Admin, I am able to view a list of all reservations made by users in order to I can manage all reservations.
+<hr>
 
 ### Site Owner
 
 18. Being a Site Owner, I can provide fully responsive site for my costumers in order to have a good experience.
 19. Being a Site Owner, I can provide an intuitive and descritive menu with description, pictures and price for my costumers in order to have a informed decision-making.
+<hr>
 
 ### Kanban, Epics & User Stories
 - GitHub Kanban was used to track all open user stories
@@ -151,8 +154,9 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
 ![Kanban finish](docs/kanban_board1.png)
 
 </details>
+<hr>
 
-##### Back to [top](#table-of-contents)<hr>
+##### Back to [top](#table-of-contents)
 
 ## Design
 
@@ -165,11 +169,12 @@ The colors I wanted to stay close to  [Coolors.co](https://coolors.co/)
 
 ![Palette Colors](docs/palette_colors.png)
 </details>
+<hr>
 
 ### Fonts
 
  None font were selected using the default system font "Helvetica".
-
+<hr>
  ### Structure
 
 #### Website pages
@@ -187,6 +192,7 @@ The footer contains all relevant social media links that the business has so the
     * **Login / Logout** allows users to login to make bookings, view, edit, and delete bookings
     * **Register** allows the user to regiser so they can use the booking system and write reviews.
     * **Error page** to display if a 403, 404 500 error is raised.
+<hr>
 
 #### Database
 Built with Python and the Django framework with a database of a Postgres for the deployed Heroku version(production)
@@ -195,6 +201,7 @@ Built with Python and the Django framework with a database of a Postgres for the
 
 ![DataBase](docs/database.png)
 </details>
+
 
 ##### User Model
 * The User Model contains the following:
@@ -207,7 +214,8 @@ Built with Python and the Django framework with a database of a Postgres for the
     * user_permissions
     * is_staff
     * superUser
-    
+  
+
 ##### User Reviews Model
 * The User Reviews Model contains the following:
     * id
@@ -252,6 +260,7 @@ Built with Python and the Django framework with a database of a Postgres for the
     * id
     * username
     * password
+<hr>
 
 ### Wireframes
 The wireframes were created using Miro
@@ -270,6 +279,7 @@ The wireframes were created using Miro
 <details><summary>Login</summary>
 <img src="docs/wireframe/wireframe_login.png">
 </details>
+
 ## Technologies Used
 
 ### Languages & Frameworks
@@ -304,6 +314,7 @@ The wireframes were created using Miro
   - [Pycodestyle(PEP8)](https://pypi.org/project/pycodestyle/)
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
   - [Wave Validator](https://wave.webaim.org/)
+<hr>
 
 ##### Back to [top](#table-of-contents)
 
@@ -498,3 +509,90 @@ JSHint JS Validation Service
 <details><summary>Script.js</summary>
 <img src="docs/validations/script_js.png">
 </details><hr>
+
+### PEP8 Validation
+PEP8 Validation Service was used to check the code for PEP8 requirements via Pycodestyle
+
+<details><summary>Tool used: Pycodestyle</summary>
+<img src="docs/validations/pycodestyle.png">
+</details>
+<hr>
+
+### Performance
+
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
+
+#### Home
+<details><summary>Desktop and Mobile</summary>
+<img src="docs/validations/lighthouse_d_home.png">
+<img src="docs/validations/lighthouse_m_home.png">
+</details>
+
+#### Menu
+<details><summary>Desktop and Mobile</summary>
+<img src="docs/validations/lighthouse_d_menu.png">
+<img src="docs/validations/lighthouse_m_menu.png">
+</details>
+
+#### Reservation
+<details><summary>Desktop and Mobile</summary>
+<img src="docs/validations/lighthouse_d_reservation.png">
+<img src="docs/validations/lighthouse_m_reservation.png">
+</details>
+
+#### Contact Us
+<details><summary>Desktop and Mobile</summary>
+<img src="docs/validations/lighthouse_d_contactus.png">
+<img src="docs/validations/lighthouse_m_contactus.png">
+</details>
+
+#### Log In
+<details><summary>Desktop and Mobile</summary>
+<img src="docs/validations/lighthouse_d_login.png">
+<img src="docs/validations/lighthouse_m_login.png">
+</details>
+
+#### Register
+<details><summary>Desktop and Mobile</summary>
+<img src="docs/validations/lighthouse_d_register.png">
+<img src="docs/validations/lighthouse_m_register.png">
+</details>
+
+#### Edit Review
+<details><summary>Desktop and Mobile</summary>
+<img src="docs/validations/lighthouse_d_edit.png">
+<img src="docs/validations/lighthouse_m_edit.png">
+</details>
+<hr>
+
+### Accessibility
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
+
+<details><summary>Home</summary>
+<img src="docs/validations/wave_home.png">
+</details>
+
+<details><summary>Menu</summary>
+<img src="docs/validations/wave_menu.png">
+</details>
+
+<details><summary>Reservation</summary>
+<img src="docs/validations/wave_resersvation.png">
+</details>
+
+<details><summary>Contact Us</summary>
+<img src="docs/validations/wave_contactUs.png">
+</details>
+
+<details><summary>Log in</summary>
+<img src="docs/validations/wave_login.png">
+</details>
+
+<details><summary>Register</summary>
+<img src="docs/validations/wave_registration.png">
+</details>
+
+<details><summary>Book</summary>
+<img src="docs/validations/wave_edit.png">
+</details>
+<hr>

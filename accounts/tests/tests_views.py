@@ -2,6 +2,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+
 class AccountsViewsTestCase(TestCase):
     """
     Test case for testing views in the 'accounts' app.
@@ -18,7 +19,8 @@ class AccountsViewsTestCase(TestCase):
 
     def test_login_view(self):
         """
-        Test the login view to ensure it returns the correct status code and template.
+        Test the login view to ensure it returns the
+        correct status code and template.
         """
         response = self.client.get(self.login_url)
         self.assertEqual(response.status_code, 200)
@@ -26,7 +28,8 @@ class AccountsViewsTestCase(TestCase):
 
     def test_register_view(self):
         """
-        Test the register view to ensure it returns the correct status code and template.
+        Test the register view to ensure it returns the
+        correct status code and template.
         """
         response = self.client.get(self.register_url)
         self.assertEqual(response.status_code, 200)
@@ -38,8 +41,9 @@ class AccountsViewsTestCase(TestCase):
         and checking that the view redirects after logout.
         """
         # Create a test user
-        user = User.objects.create_user(username='testuser', password='testpassword')
+        user = User.objects.create_user(username='testuser',
+                                        password='testpassword')
         self.client.login(username='testuser', password='testpassword')
-        
+
         response = self.client.get(self.logout_url)
         self.assertEqual(response.status_code, 302)
