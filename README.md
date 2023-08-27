@@ -103,7 +103,7 @@ Uncle Tetsu is a fictional business, create for educational purpose. It allows u
 1. Being a User, I am able to have easy navigation in order to move to each feature of the site.
 2. Being a User, I am able to see dish information(description, image and price) in order to make an informed decision.
 3. Being a User, I am able to easily find the address and location in order to view in a map the directions.
-4. Being a User, I am able to find contact information and opening hours in order to when the business is open and how to contact via phone or email.
+4. Being a User, I am able to find contact information and opening hours in order to know when the business is open and how to contact via phone or email.
 5. Being a User, I am able to find social media icons in order to follow the business social medias.
 6. Being a User, I am able to write reviews, and rating in order to share my experience with others.
 7. Being a User, I am able to edit or delete an existing review in order to update and provide my experience.
@@ -592,7 +592,163 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 <img src="docs/validations/wave_registration.png">
 </details>
 
-<details><summary>Book</summary>
+<details><summary>Edit Reviews</summary>
 <img src="docs/validations/wave_edit.png">
 </details>
+
+<details><summary>Error</summary>
+<img src="docs/validations/wave_error.png">
+</details>
 <hr>
+
+## Testing
+
+### Manual testing
+
+1. Being a User, I am able to have easy navigation in order to move to each feature of the site.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click on the 'Home' link in the navigation bar | Homepage will load| Works as expected |
+| Click on the 'Menu' link in the navigation bar | Menu page will load| Works as expected |
+| Click on the 'Reservation' link in the navigation bar | Reservation page will load| Works as expected |
+| Click on the 'Contact Us' link in the navigation bar | Contact Us page will load| Works as expected |
+| Click on the 'Login' link in the navigation bar | Login menu page will load| Works as expected |
+| Click on the 'Logo' link in the navigation bar | Homepage page will load| Works as expected |
+
+<details><summary>Manual testing 1</summary>
+<img src="docs/tests/manual_test_navbar_home.png">
+<img src="docs/tests/manual_test_navbar_menu.png">
+<img src="docs/tests/manual_test_navbar_reservation.png">
+<img src="docs/tests/manual_test_navbar_contact.png">
+<img src="docs/tests/manual_test_navbar_login.png">
+<img src="docs/tests/manual_test_navbar_logo.png">
+</details>
+<hr>
+<br>
+2. Being a User, I am able to see dish information(description, image and price) in order to make an informed decision.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At menu page | a list of images for the dishes | Works as expected |
+| At menu page hover over the pictures | Name, description and price of the dishe| Works as expected |
+
+<details><summary>Manual testing 2</summary>
+<img src="docs/tests/manual_test_menu1.png">
+<img src="docs/tests/manual_test_menu2.png">
+</details>
+<hr>
+<br>
+
+3. Being a User, I am able to easily find the address and location in order to view in a map the directions.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Contact page | Full address is displayed ate the top of the page | Works as expected |
+| At Contact page | a clickable map shows the address | Works as expected |
+
+<details><summary>Manual testing 3</summary>
+<img src="docs/tests/manual_test_address1.png">
+<img src="docs/tests/manual_test_address2.png">
+</details>
+<hr>
+<br>
+
+4. Being a User, I am able to find contact information and opening hours in order to know when the business is open and how to contact via phone or email.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Reservation page | a clickable Phone number and e-mail contact | Works as expected |
+| At Contact page | a clickable Phone number and e-mail contact | Works as expected |
+
+<details><summary>Manual testing 4</summary>
+<img src="docs/tests/manual_test_contact_info1.png">
+<img src="docs/tests/manual_test_contact_info2.png">
+</details>
+<hr>
+<br>
+
+5. Being a User, I am able to find social media icons in order to follow the business social medias.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| On footer t the bottom of all pages | Links send users to the business social medias | Works as expected |
+
+<details><summary>Manual testing 5</summary>
+<img src="docs/tests/manual_test_socialmedia.png">
+</details>
+<hr>
+<br>
+
+6. Being a User, I am able to write reviews, and rating in order to share my experience with others.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Home page click on the button "Send a Review" on Reviews section | Text field, rating 1 to 5 option and a button to submit | Works as expected |
+
+<details><summary>Manual testing 6</summary>
+<img src="docs/tests/manual_test_review1.png">
+<img src="docs/tests/manual_test_review2.png">
+</details>
+<hr>
+<br>
+
+7. Being a User, I am able to edit or delete an existing review in order to update and provide my experience.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Home page, reviews section click on the button "edit" | Text field, rating 1 to 5 option and a button to submit | Works as expected |
+| At Home page, reviews section click on the button "delete" | Text field, rating 1 to 5 option and a button to submit | Works as expected |
+
+<details><summary>Manual testing 7</summary>
+<img src="docs/tests/manual_test_edit1.png">
+<img src="docs/tests/manual_test_edit2.png">
+<img src="docs/tests/manual_test_delete.png">
+</details>
+<hr>
+<br>
+
+8. Being a User, I am able to sign in/sign up in order to make reservation and write reviews.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Log In page | A form to for user be able to insert username and password to log in | Works as expected |
+| At Log In page, under the for has a link to send user to register page | A form for the users to insert personal details to resgister to the site | Works as expected |
+
+<details><summary>Manual testing 8</summary>
+<img src="docs/tests/manual_test_login.png">
+<img src="docs/tests/manual_test_register1.png">
+<img src="docs/tests/manual_test_register2.png">
+</details>
+<hr>
+<br>
+
+9. Being a User, I am able to make a reservation in order to to take a table for the chosen date, time and number of guests.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Reservation page | A form for the user make a reservation | Works as expected |
+| At Home page, click on the button Make A Reservation in the main banner | A form for the user make a reservation | Works as expected |
+| At Menu page, click on the button Make A Reservation in the main banner | A form for the user make a reservation | Works as expected |
+
+<details><summary>Manual testing 9</summary>
+<img src="docs/tests/manual_test_reservation1.png">
+<img src="docs/tests/manual_test_reservation2.png">
+<img src="docs/tests/manual_test_reservation3.png">
+</details>
+<hr>
+<br>
+
+10. Being a User, I am able to see reservation details in order to to accept or delete my reservation.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Reservation page for users that already have a reservation | All the existing reservation details | Works as expected |
+| Just after make a reservation,  | All the existing reservation details | Works as expected |
+
+<details><summary>Manual testing 10</summary>
+<img src="docs/tests/manual_test_detail1.png">
+<img src="docs/tests/manual_test_detail2.png">
+</details>
+<hr>
+<br>
