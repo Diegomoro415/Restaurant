@@ -864,3 +864,64 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 </details>
 <hr>
 <br>
+
+### Automated testing
+
+- Testing was done using the built in Django module, unittest.
+- Coverage was also usesd to generate a report
+
+<details><summary>Accounts, test_admin.py</summary>
+<img src="docs/tests/accounts_tests_admin.png">
+</details>
+
+<details><summary>Accounts, test_forms.py</summary>
+<img src="docs/tests/accounts_tests_forms.png">
+</details>
+
+<details><summary>Accounts, test_middleware.py</summary>
+<img src="docs/tests/accounts_tests_middleware.png">
+</details>
+
+<details><summary>Accounts, test_models.py</summary>
+<img src="docs/tests/accounts_tests_models.png">
+</details>
+
+<details><summary>Accounts, test_urls.py</summary>
+<img src="docs/tests/accounts_tests_urls.png">
+</details>
+
+<details><summary>Accounts, test_views.py</summary>
+<img src="docs/tests/accounts_tests_views.png">
+</details>
+
+<details><summary>Accounts, coverage</summary>
+<img src="docs/tests/accounts_coverage.png">
+</details>
+
+<details><summary>Contact Us, tests.py</summary>
+<img src="docs/tests/contact_tests.png">
+</details>
+
+<details><summary>Contact Us, coverage</summary>
+<img src="docs/tests/contact_coverage.png">
+</details>
+
+<details><summary>Home, test_forms.py</summary>
+<img src="docs/tests/home_tests_forms.png">
+</details>
+
+<details><summary>Home, test_models.py</summary>
+<img src="docs/tests/home_tests_models.png">
+</details>
+
+<details><summary>Home, test_urls.py</summary>
+<img src="docs/tests/home_tests_urls.png">
+</details>
+
+<details><summary>Home, tests_views.py</summary>
+<img src="docs/tests/home_tests_views.png">
+</details>
+
+<details><summary>Home, coverage</summary>
+<img src="docs/tests/home_coverage.png">
+</details>
