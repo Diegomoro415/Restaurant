@@ -925,3 +925,44 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 <details><summary>Home, coverage</summary>
 <img src="docs/tests/home_coverage.png">
 </details>
+
+<details><summary>Menu, test_admin.py</summary>
+<img src="docs/tests/menu_tests_admin.png">
+</details>
+
+<details><summary>Menu, test_models.py</summary>
+<img src="docs/tests/menu_tests_models.png">
+</details>
+
+<details><summary>Menu, test_urls.py</summary>
+<img src="docs/tests/menu_tests_urls.png">
+</details>
+
+<details><summary>Menu, tests_views.py</summary>
+<img src="docs/tests/menu_tests_views.png">
+</details>
+
+<details><summary>Menu, coverage</summary>
+<img src="docs/tests/menu_coverage.png">
+</details>
+
+<details><summary>Reservation, test_admin.py</summary>
+<img src="docs/tests/reservation_tests_admin.png">
+</details>
+
+<details><summary>Reservation, test_models.py</summary>
+<img src="docs/tests/reservation_tests_models.png">
+</details>
+
+<details><summary>Reservation, test_urls.py</summary>
+<img src="docs/tests/reservation_tests_urls.png">
+</details>
+
+<details><summary>Reservation, tests_views.py</summary>
+<img src="docs/tests/reservation_tests_views.png">
+</details>
+
+<details><summary>Reservation, coverage</summary>
+<img src="docs/tests/reservation_coverage.png">
+</details>
+
