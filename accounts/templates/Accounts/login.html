@@ -8,38 +8,6 @@
     <div class="col-md-6">
       <!-- Sign In Heading -->
       <h2 class="text-center mb-4">Sign In</h2>
-      <div class="text-center mb-3">
-          <!-- Social Media Sign-In Buttons -->
-          {% if user.is_authenticated and user.socialaccount_set.all %}
-            {% for account in user.socialaccount_set.all %}
-              {% if account.provider == 'facebook' %}
-              <a href="{% provider_login_url 'facebook' %}" class="btn facebook-btn btn-link btn-floating mx-1">
-                <i class="fab fa-facebook-f social-icon"></i>  Sign in with Facebook
-              </a>  
-              {% elif account.provider == 'google' %}
-              <a href="{% provider_login_url 'google' %}" class="btn google-btn btn-link btn-floating mx-1">
-                <i class="fab fa-google social-icon"></i>  Sign in with Google
-              </a>
-              {% elif account.provider == 'github' %}
-              <a href="{% provider_login_url 'github' %}" class="btn github-btn btn-link btn-floating mx-1">
-                <i class="fab fa-github social-icon"></i>  Sign in with GitHub
-              </a>
-              {% endif %}
-            {% endfor %}
-          {% else %}
-            <a href="{% provider_login_url 'facebook' %}" class="btn facebook-btn btn-link btn-floating mx-1">
-              <i class="fab fa-facebook-f social-icon"></i>  Sign in with Facebook
-            </a>
-            <a href="{% provider_login_url 'google' %}" class="btn google-btn btn-link btn-floating mx-1">
-              <i class="fab fa-google social-icon"></i>  Sign in with Google
-            </a>
-            <a href="{% provider_login_url 'github' %}" class="btn github-btn btn-link btn-floating mx-1">
-              <i class="fab fa-github social-icon"></i>  Sign in with GitHub
-            </a>
-          {% endif %}
-      </div>
-      <!-- Alternate Sign-In Options -->
-      <p class='p-signup'>or:</p>
       <!-- Sign-In Form -->
       <form method="post">
         {% csrf_token %}

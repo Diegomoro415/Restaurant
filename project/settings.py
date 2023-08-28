@@ -70,7 +70,6 @@ INSTALLED_APPS = [
     'accounts',
 ]
 
-# Configurações de autenticação social
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',

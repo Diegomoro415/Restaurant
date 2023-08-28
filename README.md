@@ -577,7 +577,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 </details>
 
 <details><summary>Reservation</summary>
-<img src="docs/validations/wave_resersvation.png">
+<img src="docs/validations/wave_reservation.png">
 </details>
 
 <details><summary>Contact Us</summary>
@@ -749,6 +749,118 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 <details><summary>Manual testing 10</summary>
 <img src="docs/tests/manual_test_detail1.png">
 <img src="docs/tests/manual_test_detail2.png">
+</details>
+<hr>
+<br>
+
+11. Being a Admin, I am able to manually make reservation in order to make reservation when a costumer calls or contact via social medias.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Admin dashboard, click on "reservation" then "add reservation"| A form with all necessary information for a reservation | Works as expected |
+
+<details><summary>Manual testing 11</summary>
+<img src="docs/tests/manual_test_admin_reservation1.png">
+<img src="docs/tests/manual_test_admin_reservation2.png">
+</details>
+<hr>
+<br>
+
+12. Being a Admin, I am able to authenticate and log into the admin dashboard in order to manage users informations, reservations history and reviews.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Admin dashboard | A navbar that links to manage, users, reservations and reviews | Works as expected |
+
+<details><summary>Manual testing 12</summary>
+<img src="docs/tests/manual_test_admin_dashboard.png">
+</details>
+<hr>
+<br>
+
+13. Being a Admin, I am able to manage menu items in order to add, delete menu items details.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Admin dashboard, click on "menu" | A list of all existing items option to add, edit or delete a item | Works as expected |
+
+<details><summary>Manual testing 13</summary>
+<img src="docs/tests/manual_test_admin_menu.png">
+</details>
+<hr>
+<br>
+
+14. Being a Admin, I am able to have access to the user reviews in order to manage and moderate all reviews.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Admin dashboard, click on "user reviews" | A list of all existing reviews, option to read or delete and a filter to easially find a review by author, date or approved | Works as expected |
+
+<details><summary>Manual testing 14</summary>
+<img src="docs/tests/manual_test_admin_reviews.png">
+</details>
+<hr>
+<br>
+
+15. Being a Admin, I am able to filter registered users by name, staff status, superuser status in order to easily find a specific user or staff member contact.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Admin dashboard, click on "user reviews" | A list of all existing reviews, option to read or delete and a filter to easially find a review by author, date or approved | Works as expected |
+
+<details><summary>Manual testing 15</summary>
+<img src="docs/tests/manual_test_admin_filter.png">
+</details>
+<hr>
+<br>
+
+16. Being a Adimin, I am able to filter reservation in order to easily see a reservation by date, author or if reservation is cancelled.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Admin dashboard, click on "reservation" | A search bar to search for name, email phone number and a filter | Works as expected |
+
+<details><summary>Manual testing 16</summary>
+<img src="docs/tests/manual_test_admin_reservation_filter.png">
+</details>
+<hr>
+<br>
+
+17. Being a Admin, I am able to view a list of all reservations made by users in order to I can manage all reservations.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Admin dashboard, click on "reservation" | A list of all existing reservation, so you can create, edit, approve or cancel | Works as expected |
+
+<details><summary>Manual testing 17</summary>
+<img src="docs/tests/manual_test_admin_reservation3.png">
+<img src="docs/tests/manual_test_admin_reservation4.png">
+</details>
+<hr>
+<br>
+
+18. Being a Site Owner, I can provide fully responsive site for my costumers in order to have a good experience.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Desktop or mobile | A fully responsive site | Works as expected |
+
+<details><summary>Manual testing 18</summary>
+<img src="docs/tests/manual_test_responsive1.png">
+<img src="docs/tests/manual_test_responsive2.png">
+</details>
+<hr>
+<br>
+
+19. Being a Site Owner, I can provide an intuitive and descritive menu with description, pictures and price for my costumers in order to have a informed decision-making.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| At Menu page, a list of items that contains in menu | A descritive information for each item | Works as expected |
+
+<details><summary>Manual testing 18</summary>
+<img src="docs/tests/manual_test_description1.png">
+<img src="docs/tests/manual_test_description2.png">
 </details>
 <hr>
 <br>
