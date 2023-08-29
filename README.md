@@ -1147,3 +1147,8 @@ Create a local copy of the repository through these actions:
 
 ##### Back to [top](#table-of-contents)<hr>
 
+## Bugs
+
+| **Bug** | **Fix** |
+| ------- | ------- |
+| "django_site" does not exist| I fixed using the commands brew tap homebrew/core then brew install postgresql |
