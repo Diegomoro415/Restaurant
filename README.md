@@ -966,3 +966,184 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 <img src="docs/tests/reservation_coverage.png">
 </details>
 
+### Device Testing & Browser compatibility
+
+The tool used to test the site was [BrowserStack](https://www.browserstack.com/)  
+
+This allowed mus to test on real devices and not just device emulators.
+
+The devices were used to test the site was the following:
+
+
+<details><summary>Apple IPhone 13 (Google Chrome) </summary>
+<img src="docs/tests/device_test_iphone13.png">
+</details>
+
+<details><summary>Apple IPhone XS (Safari)</summary>
+<img src="docs/tests/device_test_iphonexs.png">
+</details>
+
+<details><summary>Xiaomi Note 12 Pro (Mozila)</summary>
+<img src="docs/tests/device_test_xiaomi.png">
+</details>
+
+<details><summary>Microsoft Edge Version (v116 latest)</summary>
+<img src="docs/tests/device_test_edge.png">
+</details>
+
+<details><summary>Google Chrome (v116 latest)</summary>
+<img src="docs/tests/device_test_chrome.png">
+</details>
+
+<details><summary>Mozila Firefox (v116 latest)</summary>
+<img src="docs/tests/device_test_moz.png">
+</details>
+
+
+##### Back to [top](#table-of-contents)<hr>
+
+### Heroku Deployment
+
+[Official Guide](https://devcenter.heroku.com/articles/git) (Ctrl + click)
+
+The following instructions detail the process of deploying your application from GitHub to Heroku:
+
+1. **Create a Heroku Account at heroku.com**
+<details>
+<img src="docs/heroku/heroku_step1.png">
+</details>
+Begin by registering for an account on heroku.com.
+<hr>
+
+2. **Create a new app, give it a name, and select a region**
+<details>
+<img src="docs/heroku/heroku_step2.png">
+</details>
+Give your app a name, like "ut-restaurant," and choose a region.
+<hr>
+
+3. **Add a Postgres Database**
+<details>
+<img src="docs/heroku/heroku_step3.png">
+</details>
+Under resources, find Postgres and attach it to your app.
+<hr>
+
+4. **Configure Heroku Postgres**<br>
+(Note the DATABASE_URL, this can be set as an environment variable in Heroku and your local deployment(env.py))
+<details>
+<img src="docs/heroku/heroku_step4.1.png">
+<img src="docs/heroku/heroku_step4.2.png">
+<img src="docs/heroku/heroku_step4.3.png">
+</details>
+Note down the DATABASE_URL for future reference.
+<hr>
+
+5. **Install Necessary Packages**
+Install the packages dj-database-url and psycopg2-binary. Document them in the requirements.txt file by using the code **"pip3 freeze > requeriments.txt"**:
+<details>
+<img src="docs/heroku/heroku_step5.png">
+</details>
+Under resources, find Postgres and attach it to your app.
+<hr>
+
+6. **Create a Procfile in the root diretory**
+<details>
+<img src="docs/heroku/heroku_step6.png">
+</details>
+Generate a file named Procfile and insert this line: web: gunicorn "PROJECT_NAME".wsgi.
+<hr>
+
+7. **Configure Database Settings**
+<details>
+<img src="docs/heroku/heroku_step7.1.png">
+<img src="docs/heroku/heroku_step7.2.png">
+</details>
+In your settings.py file, set up the connection to the Heroku Postgres database and remove any test database indentation.
+<hr>
+
+8. **Deactivate Debug Mode**
+<details>
+<img src="docs/heroku/heroku_step8.png">
+</details>
+Adjust the DEBUG setting in your settings.py to False.
+<hr>
+
+9. **Configure Allowed Hosts**
+<details>
+<img src="docs/heroku/heroku_step9.png">
+</details>
+Add your app's domain and localhost to the ALLOWED_HOSTS list in settings.py.
+<hr>
+
+10. **Execute Database Migrations**<br>
+Utilize python3 manage.py showmigrations to verify migration status, python3 manage.py makemigrations and then apply the migrations using python3 manage.py migrate.
+<hr>
+
+11. **Create a Superuser Account**<br>
+Generate a super/admin user account by executing python3 manage.py createsuperuser.
+<hr>
+
+
+12. **Load Initial Data**<br>
+Populate categories and products by running:
+python3 manage.py loaddata datadump.json
+<hr>
+
+13. **Install Gunicorn**<br>
+Install gunicorn and add it to the requirements.txt with pip3 freeze > requirements.txt.
+<hr>
+
+14. **Disable Collectstatic**
+<details>
+<img src="docs/heroku/heroku_step14.1.png">
+</details>
+Prevent static file collection before pushing any code using heroku
+<hr>
+
+15. Set Environment Variables
+<details>
+<img src="docs/heroku/heroku_step14.2.png">
+</details>
+Configure the required environment variables within your Heroku setup.
+<hr>
+
+16. Enable Automated Deploys
+<details>
+<img src="docs/heroku/heroku_step16.1.png">
+<img src="docs/heroku/heroku_step16.2.png">
+</details>
+Establish a connection between your app and GitHub, enabling automatic deploys from the main branch.
+<hr>
+
+17. **Deploy Your Application**<br>
+Initiate the initial deployment by selecting the "Deploy" option.
+<hr>
+
+18. **Access Your Deployed App**<br>
+Click on the provided link to access your newly deployed application.
+<hr>
+
+19. **Troubleshoot with Build Logs**<br>
+If any challenges arise, utilize the build logs to help diagnose and troubleshoot the issue.
+<hr>
+
+### Fork the Repository
+To create a copy of the repository, follow these steps:
+1. Visit the GitHub repository.
+2. Locate the "Fork" button in the upper right corner.
+<hr>
+
+### Clone Repository
+Create a local copy of the repository through these actions:
+1. Access the GitHub repository page.
+2. Locate the "Code" button located above the list of files and press it.
+3. Opt for your preferred cloning method: HTTPS, SSH, or GitHub CLI.  to copy the URL to your clipboard
+4. Launch Git Bash or a similar terminal.
+5. Navigate to your desired directory using the "cd" command.
+6. Type "git clone" and then paste the previously copied URL. The command will resemble:
+($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press "Enter" to initialize the cloning process and create a local copy.
+
+##### Back to [top](#table-of-contents)<hr>
+

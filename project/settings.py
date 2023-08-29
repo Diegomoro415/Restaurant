@@ -157,19 +157,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 #    }
 # }
 
-# DATABASES = {
-#    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6ueorpstp0f1c',
-        'USER': 'mltbmunsjsltin',
-        'PASSWORD': 'e280754f949cbdcff12a0d85e1c384f5ec6bde8eb3f2b1e6592fb7bc9a08616a',
-        'HOST': 'ec2-54-78-142-10.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 # Password validation
