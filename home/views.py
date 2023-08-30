@@ -88,6 +88,7 @@ def edit_review(request, pk):
         form = UserReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your review has been updated successfully!')
             return redirect('home:home_view')
     else:
         form = UserReviewForm(instance=review)

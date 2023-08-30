@@ -175,6 +175,7 @@ The colors I wanted to stay close to  [Coolors.co](https://coolors.co/)
 
  None font were selected using the default system font "Helvetica".
 <hr>
+
  ### Structure
 
 #### Website pages
@@ -1152,7 +1153,9 @@ Create a local copy of the repository through these actions:
 | **Bug** | **Fix** |
 | ------- | ------- |
 | "django_site" does not exist| I fixed using the commands brew tap homebrew/core then brew install postgresql |
-
+| "The CSS file 'site_static/css/bootstrap.min.css' references a file which could not be found:
+  site_static/css/bootstrap.min.css.map" | solution was to change debug to true then debug false
+| "Uncaught ReferenceError: jQuery is not defined" | Add "defer" to script link |
 ## Credits
 
 ### Images
@@ -1170,4 +1173,4 @@ caroussel (https://owlcarousel2.github.io/)
 ### Special thanks:
 - Code Institute
 - My Mentor Mo Shami
-- My wife to all support
+- My wife for all support
