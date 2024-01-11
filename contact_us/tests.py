@@ -19,7 +19,7 @@ class ContactUsViewTests(TestCase):
 
 class ErrorHandlingTests(TestCase):
     """
-    Test suite for custom error handling views.
+    Test suite for custom error handling views
     """
 
     def test_404_handler(self):
