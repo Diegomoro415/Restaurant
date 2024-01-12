@@ -25,7 +25,6 @@ handler500 = 'contact_us.views.handler500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sumernote/', include('django_summernote.urls')),
     path('home/', include('home.urls', namespace='home')),
     path('menu/', include('menu.urls', namespace='menu')),
     path('reservation/', include('reservation.urls', namespace='reservation')),
