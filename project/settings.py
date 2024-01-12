@@ -36,7 +36,8 @@ ALLOWED_HOSTS = [
     'ut-restaurant.herokuapp.com',
     'ut-restaurant-d71a0939b77c.herokuapp.com',
     '127.0.0.1',
-    'localhost'
+    'localhost',
+    '192.168.100.168'
 ]
 
 SITE_ID = 1
@@ -158,7 +159,7 @@ if os.environ.get("DEVELOPMENT") == "True":
 else:
     #Heroku DataBase
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        'default': dj_database_url.config(default=os.getenv('DATABASE_URL'), conn_max_age=600, ssl_require=True)
     }
 
 # Password validation
