@@ -59,10 +59,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
-    'social_django',
+    #'social_django',
     'cloudinary',
-    'crispy_forms',
-    'crispy_bootstrap4',
+    #'crispy_forms',
+    #'crispy_bootstrap4',
     
     'home',
     'menu',
@@ -222,4 +222,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = 'login'
-
