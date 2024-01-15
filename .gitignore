@@ -2,3 +2,5 @@ env.py
 bin
 lib
 pyvenv.cfg
+.DS_Store
+datadump.json

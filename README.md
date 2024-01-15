@@ -1156,6 +1156,7 @@ Create a local copy of the repository through these actions:
 | "The CSS file 'site_static/css/bootstrap.min.css' references a file which could not be found:
   site_static/css/bootstrap.min.css.map" | solution was to change debug to true then debug false
 | "Uncaught ReferenceError: jQuery is not defined" | Add "defer" to script link |
+|"avoiding error 500 on heroku"| Add files and folders to gitigonre  |
 ## Credits
 
 ### Images
