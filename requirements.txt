@@ -21,6 +21,7 @@ django-libs==2.0.3
 django-summernote==0.8.20.0
 django-user-media==1.2.5
 easy-thumbnails==2.8.5
+exceptiongroup==1.2.0
 gunicorn==21.2.0
 idna==3.4
 iniconfig==2.0.0
@@ -28,11 +29,12 @@ oauthlib==3.2.2
 packaging==23.1
 Pillow==10.0.0
 pluggy==1.2.0
-psycopg2==2.9.7
-psycopg2-binary==2.9.6
+psycopg2==2.9.9
+psycopg2-binary==2.9.1
 pycodestyle==2.11.0
 pycparser==2.21
 PyJWT==2.8.0
+pytest==7.4.4
 pytest-django==4.5.2
 python-dotenv==1.0.0
 python3-openid==3.2.0
@@ -44,6 +46,7 @@ social-auth-app-django==5.2.0
 social-auth-core==4.4.2
 soupsieve==2.4.1
 sqlparse==0.4.4
+tomli==2.0.1
 typing_extensions==4.7.1
 urllib3==1.26.16
 webencodings==0.5.1

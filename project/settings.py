@@ -37,7 +37,8 @@ ALLOWED_HOSTS = [
     'ut-restaurant-d71a0939b77c.herokuapp.com',
     '127.0.0.1',
     'localhost',
-    '192.168.100.168'
+    '192.168.100.168',
+    '8000-diegomoro415-restaurant-rr7u5v2olo.us2.codeanyapp.com'
 ]
 
 SITE_ID = 1
