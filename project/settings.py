@@ -160,10 +160,8 @@ if os.environ.get("DEVELOPMENT") == "True":
     }
 else:
     #Heroku DataBase
-    DATABASE_URL = os.getenv('DATABASE_URL')
-    DATABASES = {
-    'default': dj_database_url.config(),
-}
+    DATABASES = {'default': dj_database_url.config(default=DATABASE_URL)}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
