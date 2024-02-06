@@ -30,7 +30,7 @@ if os.path.isfile('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'ut-restaurant.herokuapp.com',
@@ -39,7 +39,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '192.168.100.168',
     '8000-diegomoro415-restaurant-rr7u5v2olo.us2.codeanyapp.com',
-    '8000-diegomoro415-restaurant-k3bedt1dgtl.ws-us107.gitpod.io'
+    '8000-diegomoro415-restaurant-k3bedt1dgtl.ws-us107.gitpod.io',
+    '8000-diegomoro415-restaurant-g60fxyi6i85.ws-us108.gitpod.io'
 ]
 
 SITE_ID = 1
